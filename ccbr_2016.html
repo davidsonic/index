@@ -1,5 +1,187 @@
-<html>
-<body>
-<h3>hello</h3>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Face Classification: A Specialized Benchmark Study</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="css/ccbr_2016.css" />
+
+  <script>
+  function page_loaded() {
+  }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+<div id="header">
+    Face Classification: A Specialized Benchmark Study</h1>
+  <div style="clear:both;"></div>
+</div>
+
+<!--
+<div id="teaser">
+</div>
+-->
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+
+  <div id="coursedesc">
+Face detection evaluation generally involves three steps: block
+generation, face classification, and post-processing. However, firstly, face
+detection performance is largely influenced by block generation and post-
+processing, concealing the performance of face classification core mod-
+ule. Secondly, implementing and optimizing all the three steps results
+in a very heavy work, which is a big barrier for researchers who only
+cares about classification. Motivated by this, we conduct a specialized
+benchmark study in this paper, which focuses purely on face classifica-
+tion. We start with face proposals, and build a benchmark dataset with
+about 3.5 million patches for two-class face/non-face classification. Re-
+sults with several baseline algorithms show that, without the help of
+post-processing, the performance of face classification itself is still not
+very satisfactory, even with a powerful CNN method. 
+
+The data and evaluation code of this study will be released to the public
+to help assess performance of face classification, and ease the participation of
+related researchers who want to try their algorithms for face detection. With this
+benchmark, researchers only need to do feature extraction and face classification
+per image patch, regardless the troubling block generation and post-processing
+tasks. Even more easily, we provide some baseline features, so that general clas-
+sification researchers are able to evaluate their classification algorithms.
+  </div>
+</div>
+</div>
+
+<div class="container sec">
+
+<!-- <a href="../densecap.pdf" style="font-size:22px">Paper</a><br> -->
+<a href="ccbr2016.pdf">
+  <img src="densecap.png" style="width:100%;border: 1px solid #AAA;">
+</a>
+
+<br>
+<div>
+  <div class="instructor">
+    <a href="https://davidsonic.github.io/index/">
+    <div class="instructorphoto"><img src="djl.jpg"></div>
+    <div>Jiali Duan</div>
+    </a>
+  </div>
+  <div class="instructor">
+    <a href="http://www.cbsr.ia.ac.cn/users/scliao/index.html">
+    <div class="instructorphoto"><img src="scliao.jpg"></div>
+    <div>Shengcai Liao</div>
+    </a>
+  </div>
+  <div class="instructor">
+    <a href="http://www.cbsr.ia.ac.cn/users/szli/">
+    <div class="instructorphoto"><img src="stanzli.jpg"></div>
+    <div>Stan Z.Li</div>
+    </a>
+  </div>
+</div>
+
+<div style="color:#900;">
+  To appear in CCBR 2016 (Oral)
+</div>
+
+</div>
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+
+    <div class="col-md-5">
+      <h2>Code and Extras</h2>
+      Find additional resources on  <a href="https://github.com/davidsonic/face_classification_ccbr2016">Github</a>, including:
+      <ul>
+        <li>Face classification benchmark</li>
+        <li>Pretrained model</li>
+        <li>Proposal extraction code</li>
+        <li>Evaluation code</li>
+      </ul>
+    </div>
+    <div class="col-md-7">
+      <h2>Bibtex</h2>
+<pre style="font-size:12px;">
+@inproceedings{densecap,
+  title={Face Classification: A Specialized Benchmark Study},
+  author={Jiali Duan, Shengcai Liao, Shuai Zhou, and Stan Z. Li},
+  conference={ccbr},
+  year={2016}
+}
+</pre>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container sec">
+  <h2>Example Results: Dense Captioning</h2>
+
+  Example predictions from the model. We slightly cherry picked images in favor of high-resolution, rich scenes and no toilets.
+  <br>
+  Browse the <b>full results</b> on our interactive <a href="browser">predictions visualizer page</a> (30MB) (visualizer code also included on Github).
+  <br><br>
+
+  <div id="gallery">
+    <div class="egimg"><img src="eg/p1.jpeg"></div>
+    <div class="egimg"><img src="eg/p8.jpeg"></div>
+    <div class="egimg"><img src="eg/p9.jpeg"></div>
+
+    <div class="egimg"><img src="eg/p3.jpeg"></div>
+    <div class="egimg"><img src="eg/p4.jpeg"></div>
+    <div class="egimg"><img src="eg/p6.jpeg"></div>
+
+    <div class="egimg"><img src="eg/p10.jpeg"></div>
+    <div class="egimg"><img src="eg/p7.jpeg"></div>
+    <div class="egimg"><img src="eg/p14.jpeg"></div>
+
+    <div class="egimg"><img src="eg/p17.jpeg"></div>
+    <div class="egimg"><img src="eg/p18.jpeg"></div>
+    <div class="egimg"><img src="eg/p2.jpeg"></div>
+    
+    <div class="egimg"><img src="eg/p15.jpeg"></div>
+    <div class="egimg"><img src="eg/p13.jpeg"></div>
+    <div class="egimg"><img src="eg/p16.jpeg"></div>
+
+
+    <div class="egimg"><img src="eg/p12.jpeg"></div>
+    <div class="egimg"><img src="eg/p11.jpeg"></div>
+    <div class="egimg"><img src="eg/p19.jpeg"></div>
+  </div>
+
+</div>
+
+<div class="sechighlight">
+<div id="footer">
+This work was supported by the National Key Research and Development Plan
+(Grant No.2016YFC0801002), the Chinese National Natural Science Founda-
+tion Projects #61473291, #61572501, #61502491, #61572536, NVIDIA GPU
+donation program and AuthenMetric R&D Funds.
+</div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
 </body>
+
 </html>
