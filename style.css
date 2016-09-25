@@ -12,7 +12,7 @@ html, body {
 }
 
 .bg1 {
-  background-image: url('ucas.jpg');
+  background-image: url('ucas-blur.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
