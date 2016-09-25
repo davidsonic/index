@@ -14,7 +14,7 @@ html, body {
   background-image: url('ucas.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: 100% auto;
 }
 .bg2 {
   background-color: #299DB6;
@@ -39,18 +39,18 @@ html, body {
 #htname {
   font-size: 46px;
   font-weight: 400;
-  color:'black';
+  color:#FFF;
 }
 #htdesc {
   font-size: 18px;
   font-weight: 300;
   margin-top: -6px;
-  color:'black';
+  color:#FFF;
 }
 #htem {
   font-size: 14px;
   font-weight: 300;
-  color:'black';
+  color:#FFF;
 }
 @media (max-width: 768px) {
   #headerblob {
