@@ -9,11 +9,6 @@ html, body {
   font-weight: 300;
   color: white;
   margin-bottom: 40px;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
 }
 
 .bg1 {
