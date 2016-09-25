@@ -39,18 +39,18 @@ html, body {
 #htname {
   font-size: 46px;
   font-weight: 400;
-  color:#FFF;
+  color:black;
 }
 #htdesc {
   font-size: 18px;
   font-weight: 300;
   margin-top: -6px;
-  color:#FFF;
+  color:black;
 }
 #htem {
   font-size: 14px;
   font-weight: 300;
-  color:#FFF;
+  color:black;
 }
 @media (max-width: 768px) {
   #headerblob {
