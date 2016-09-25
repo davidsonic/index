@@ -15,6 +15,11 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
 }
 .bg2 {
   background-color: #299DB6;
