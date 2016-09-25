@@ -14,7 +14,7 @@ html, body {
   background-image: url('ucas.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto 100%;
+  background-size: 100% 100%;
 }
 .bg2 {
   background-color: #299DB6;
