@@ -44,13 +44,13 @@ html, body {
 }
 #htdesc {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 380;
   margin-top: -6px;
   color:black;
 }
 #htem {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 380;
   color:black;
 }
 @media (max-width: 768px) {
