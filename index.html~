@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Duanjiali.GitHub.io : Jiali Duan&#39;s Personal Blog">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/github-light.css' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/sytlesheet.css' rel='stylesheet' type='text/css'>
+    <title>Jiali Duan's blog</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+<div id="header" class="bg1">
+  <div id="topnav">
+    <ul>
+      <li><a href="http://duanjiali.github.io/">blog</a></li>
+    </ul>
+  </div>
+  <div id="headerblob">
+    <img src="djl2.jpg" class="img-circle imgme" style="height:120px; width=100px;">
+    <div id="headertext">
+      <div id="htname">Jiali Duan</div>
+      <div id="htdesc">Master Student</div>
+      <div id="htdesc">University of Chinese Academy of Sciences</div>
+      <div id="htem">jli.duan@gmail.com</div>
+    </div>
+  </div>
+</div>
+
+
+<!--timeline-->
+<div class="container">
+  <div id="timeline">
+    <div class="timelineitem">
+      <div class="tdate">2016.8 - </div>
+      <div class="ttitle">Person-reidentification and Reinforcement Learning</div>
+      <div class="tdesc">Doing research under the supervision of <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z.Li</a> 
+      and <a href="http://www.cbsr.ia.ac.cn/users/scliao/index.html">Shengcai Liao</a></div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2016.6 - 2016.7</div>
+      <div class="ttitle">Face classification benchmark</div>
+      <div class="tdesc"><i>Face Classification: A Specialized Benchmark Study</i> CCBR oral.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2016.3 - 2016.6</div>
+      <div class="ttitle">Face detection</div>
+      <div class="tdesc"><i>Face Detection by Aggregating Visible Components</i>.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2015.9 - 2016.3</div>
+      <div class="ttitle">AuthenMetic Internship</div>
+      <div class="tdesc">I work as an intern at AuthenMetric, mainly focusing on <a href="http://www.authenmetric.com/">face anti-spoofing.</a></div>
+    </div>
+    <div class="timelineitem">
+     <div class="tdate">2014.9 - 2015.8</div>
+      <div class="ttitle">University of Chinese Academy of Sciences:</div>
+      <div class="ttitle">First year as a Master</div>
+      <div class="tdesc">Learning basic courses.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2010 - 2014
+      </div>
+      <div class="ttitle">East China University of Science and Technology:</div>
+      <div class="ttitle"> Bachelor's Degree</div>
+      <div class="tdesc">Major in Electronics and Communication Engineering.</div>
+    </div>
+  </div>
+</div>
+  
+  
+<!--publication-->
+          
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  
+<b>Personal Introduction</b>
+<p>As a member of the National Laboratory of Pattern Recognition in the institute of automation of the University of the Chinese Academy of Sciences, my research interests include computer vision and pattern recognition especially about deep learning.</p>
+
+</div>
+
+
+<hr class="soft">
+
+
+<div class="container">
+  <h2>Publications</h2>
+  <div id="pubs">
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            
+
+            <img src="ccbr/results.png" style="height:200px; width:auto;"> 
+            <img src="ccbr/enlarged.png" style="height:200px; width:auto;" >	
+	    <br><br>
+	    <img src="ccbr/table1.png" style="height:100px; width:auto;" >
+          </div>  
+        </div>  <!--col-md-6-->
+      
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Face Classification: A Specialized Benchmark Study</div>
+            <div class="pubd"> We conduct a specialized
+benchmark study in this paper, which focuses on face classifica
+tion. We start with face proposals, and build a benchmark dataset with
+about 3.5 million patches for two-class face/non-face classification. Results with several baseline algorithms show that, without the help of
+post-processing, the performance of face classification itself is still not
+very satisfactory, even with a powerful CNN method. We’ll release this
+benchmark to help assess performance of face classification only, and ease
+the participation of other related researchers.</div>
+
+            <div class="puba">Jiali Duan, Shengcai Liao, Shuai Zhou, and Stan Z. Li</div>
+            <div class="pubv">CCBR 2016 (Oral) </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://davidsonic.github.io/index/ccbr_2016.html">Project</a></li>
+                <li><a href="ccbr/ccbr2016.pdf">PDF</a></li>
+		<li><a href="https://github.com/davidsonic/face_classification_ccbr2016">Code (Github)</a></li>
+              </ul>
+            </div>
+            
+          </div>  <!--pub-->
+     </div>  <!--col-md-6-->
+    </div> <!--row-->
+   </div> <!--pubwrap-->
+
+
+<!--ACCV Workshop-->
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            
+
+            <img src="accv/AFW_NEW_SMALL.png" style="height:200px; ">
+            <img src="accv/FDDB_NEW_SMALL.png" style="height:200px;">
+	    
+          </div>  
+        </div>  <!--col-md-6-->
+      
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Face Detection By Aggregating Visible Components</div>
+            <div class="pubd">	</div>
+
+            <div class="puba">Jiali Duan, Shengcai Liao, Xiaoyuan Guo, and Stan Z. Li</div>
+            <div class="pubv">ACCV Workshop 2016 (Oral)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="accv_2016.html">Project</a></li>
+                <li><a href="accv/accv2016finalpaper.pdf">PDF</a></li>
+              </ul>
+            </div>
+            
+          </div>  <!--pub-->
+        </div> <!--col-md-6--> 
+	<br><br>
+        <div style="text-align:center;">
+	<img src="accv/pipeline.png" style="width:80%;">
+ 	</div>
+      </div>  <!--row-->
+        
+    </div>  <!--pubwrap-->
+      
+
+  </div> <!--pubs-->
+</div>  <!--container-->
+
+
+<hr class="soft">
+
+<div class="container">
+
+    <h2>Competition</h2>
+    <div class="ctr">
+       <div class="hht">
+    	  Autumn 5th/November/2014: I was awarded second-place for <br>
+          <a href="http://news1.ucas.ac.cn/Home/Detail18/16df15f8-cc21-4350-8c9f-e54ace93a0ce"> English Speaking Competition held by University of Chinese Academy of Sciences </a>
+     	
+       </div>
+       <a href="images/speech-ucas.png"> 
+       <img src="images/ucas-speaking.jpg" style="width:60%"></a>
+        <div>
+	 	<audio controls>
+	  	  <source src="speech.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+    </div>
+
+    <div class="ctr">
+	<div class="hht">
+	 Winter December/2012: I got outstanding-award in Shanghai Region for <br>
+         <a href="http://bbsnew.netbig.com/thread-2518904-1-1.html">
+            21st Century Coca-Cola Cup National English Speaking Competition</a> 
+	</div>
+	       <a href="images/shanghai-english.jpg"> 
+	       <img src="images/shanghai-english-pic.jpg" style="width:60%"></a>
+    </div>
+
+    <div class="ctr">
+	<div class="hht">
+	 2012/2013 I was awarded with First prize and honorable mention for <br>
+         <a href="images/math-china.jpg">
+            National Mathematical Contest in Modeling</a> and
+	 <a href="images/math-US.png">MCM/ICM</a> respectively
+	</div>
+    </div>
+
+    <div class="row">
+	<div class="col-md-6">
+ 	   <div style="font-size:25px;">Academic</div>
+		   <div class="ts">
+		     <a href="http://eece.ucas.ac.cn/index.php/zh-CN/2014-06-13-06-44-38/2014-06-13-06-45-50/1316-20160913001">Nominated for 2016 National Award (2%) in the University of Chinese Academy of Sciences
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/beijing-english.png">Honarable Mention in Beijing English Speaking Competition for Master Student
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/shanghai-tech.jpg">Participate in Summer Camp for Recommended Student for Admission of ShanghaiTech University</a>
+		   </div>
+
+   		   <div class="ts">
+		     <a href="images/math-US.png">Honarable Mention for MCM/ICM Mathematical Modeling Contest for American Students</a>
+		   </div>
+
+	 	   <div class="ts">
+		     <a href="images/math-china.jpg">Second Prize for National Mathematical Contest in Modeling
+		     </a>
+		   </div>
+		   <div class="ts">
+		     <a href="images/math-shanghai.jpg">First Prize for Shanghai Mathematical Contest in Modeling
+		     </a>
+		   </div>
+
+	           <div class="ts">
+		     <a href="images/2011-runner-up.jpg">Second Prize for 2011 English Debating Competition in ECUST
+		     </a>
+		   </div>
+
+	           <div class="ts">
+		     <a href="images/uchallenge-2nd.jpg">Second Prize for 2011 Uchallenge English Speaking Competition
+		     </a>
+		   </div>
+
+	           <div class="ts">
+		     <a href="images/ECUST-1st.jpg">First Prize for 2011 Extemporaneous English Speaking Competition in ECUST
+		     </a>
+		   </div>
+
+	</div>
+
+	<div class="col-md-6">
+ 	   <div style="font-size:25px;">Certificates</div>
+		   <div class="ts">
+		     <a href="images/Advanced-interpretation.jpg">Adavanced-Level English Interpretation Accreditation Examination Certificate
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/electronic-comp.jpg">Second Prize for <i> Electronic Assembly-Debuggi and Developing Competition</i> in UCAS
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/java-test.jpg">Shanghai Java Programming Design (Level-2) Certificate
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/photo-ucas.png">Third Prize for <i> The Most Beautiful Hometown </i> photography competition
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/poem-ucas.jpg">Honarable Mention for <i> The Most Beautiful Hometown </i> poem competition
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/exe-student1.png">Awarded with Excellent Student in University of Chinese Academy of Sciences for 2014-1015
+		     </a>
+		   </div>
+
+		   <div class="ts">
+		     <a href="images/exe-student2.png">Awarded with Excellent Student in University of Chinese Academy of Sciences for 2015-2016
+		     </a>
+		   </div>
+	   
+
+	</div>
+    </div>
+
+</div>
+
+
+<hr >
+<hr >
+
+  <div id="misc">
+    <div>Contact Information</div>
+    <div class="umisc">Here is the link of my resume, click <a href="resume.pdf">here</a> to view.</div>
+    <div class="umisc">Email: jli.duan@gmail.com</div>
+  </div>
+
+
+  </body>
+</html>
