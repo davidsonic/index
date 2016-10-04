@@ -19,11 +19,11 @@
 <div id="header" class="bg1">
   <div id="topnav">
     <ul>
-      <li><a href="http://duanjiali.github.io/">blog</a></li>
+      <li><a href="http://159.226.21.92:5901">blog</a></li>
     </ul>
   </div>
   <div id="headerblob">
-    <img src="djl2.jpg" class="img-circle imgme" style="height:140px; width=140px;">
+    <img src="djl2.jpg" class="img-circle imgme" style="height:200px; width=200px;">
     <div id="headertext">
       <div id="htname">Jiali Duan</div>
       <div id="htdesc">Master Student</div>
@@ -37,6 +37,14 @@
 <!--timeline-->
 <div class="container">
   <div id="timeline">
+  <div class="timelineitem">
+      <div class="tdate">2016.9 </div>
+      <a href="http://eece.ucas.ac.cn/index.php/zh-CN/2014-06-13-06-44-38/2014-06-13-06-45-50/1316-20160913001">
+      <div class="ttitle">Nominated for 2016 National Award (2%)</div>
+      <div class="tdesc">in the University of Chinese Academy of Sciences
+      </div>
+      </a>
+    </div>
     <div class="timelineitem">
       <div class="tdate">2016.8 - </div>
       <div class="ttitle">Video detection and Reinforcement Learning</div>
@@ -229,10 +237,6 @@ tion accuracy.	</div>
     <div class="row">
 	<div class="col-md-6">
  	   <div style="font-size:25px;">Academic</div>
-		   <div class="ts">
-		     <a href="http://eece.ucas.ac.cn/index.php/zh-CN/2014-06-13-06-44-38/2014-06-13-06-45-50/1316-20160913001">Nominated for 2016 National Award (2%) in the University of Chinese Academy of Sciences
-		     </a>
-		   </div>
 
 		   <div class="ts">
 		     <a href="images/beijing-english.png">Honarable Mention in Beijing English Speaking Competition for Master Student
@@ -317,15 +321,115 @@ tion accuracy.	</div>
 </div>
 
 
-<hr >
-<hr >
+<hr class="soft">
 
+<div class="container">
+   <h2>Pet Project</h2>
+
+   <div class="row">
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="http://159.226.21.92:5901">
+                <img src="images/django-blog.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Django+mod_wsgi+apache</div>
+           <div class="ppd">Django is a flexible and powerful tool for building 
+           personal web-site in that it has very good extensibility and is easy to adminster the server and the database. Mod_wsgi and apache2 have been used to deploy the website, feel free to <a href="http://159.226.21.92:5901"> login </a>and comment!</div>
+       </div>
+
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="http://159.226.21.92/multi_task/">
+                <img src="images/multi-task.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Multi-task Face Attributes</div>
+           <div class="ppd">Multi-task proves to be an effective way for enhancing the performance of Convolutional Neural Network. This time, it is used to predict the age, gender and nationality. Experiment shows that multi-task prediciton achieves higher accuracy compared to single task alone. Single task has also been posted to predict age, gender respectively. You can upload you image to take a try. Have fun!</div>
+       </div>
+
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="http://159.226.21.92/smile/">
+                <img src="images/smile.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Smiling Prediction</div>
+           <div class="ppd">Smiling prediction can be reformulated as a prediction task. Given an facial-image of a person, a CNN network will automatically learns to predict to what extent that person is smiling. The website is deployed on the server using flask+tornado+nginx. Try it yourself and see if it's accurate!</div>
+       </div>
+
+  </div>  <!--row-->
+  <br><br>
+
+  
+  <div>
+     <div class="row">
+
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="http://159.226.21.92/gender">
+                <img src="images/gender.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Gender Classification</div>
+           <div class="ppd">It turns out that computer often gets confused about the sextuality of a person. Illumination changes is one thing that has to be taken good care of.</div>
+       </div>
+
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="http://159.226.21.92/age">
+                <img src="images/age.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Age Classification</div>
+           <div class="ppd">Same person with different appearnces would engender different age predictions. Sounds strange? This is exactly what's challenging researchers of this area. Generally, we want the classifier to be robust to pose-variations, illuminance variance and even makeups. CNN is exciting in that it learns the most features for itself without human interference!</div>
+       </div>
+
+       <div class="col-md-4"> 
+           <div class="pp">
+              <a href="">
+                <img src="images/spider.png" class="imgb">
+              </a>
+           </div>
+           <div class="ppt">Scrapy the imdb</div>
+           <div class="ppd">To get sufficient data for CNN training, I have made an attempt to scrap the imdb using Scrapy. I've never used Regular Expression so frequently before! The reference image of person is first acquired and then his/her associated pics. One tricky part is to use Selenium to simulate JS for generating requests.</div>
+       </div>
+
+     </div> <!--row-->
+  </div> <!--more projects-->
+</div> <!--container-->
+<hr>
+<hr>
   <div id="misc">
     <div>Contact Information</div>
     <div class="umisc">Here is the link of my resume, click <a href="resume.pdf">here</a> to view.</div>
     <div class="umisc">Email: jli.duan@gmail.com</div>
   </div>
 
+  <!--place js at the end-->
+  <scipt src="js/jquery-1.11.1.min.js"></scipt>
+  <script src="js/bootstrap.min.js"></script>>
+  <script type="text/javascript" language="javascript">
 
+
+  var more_projects_shown = false;
+
+  function start() {
+   // ("#showmoreprojects").click(function(){
+    if(!more_projects_shown) {
+      $("#moreprojects").slideDown('fast', function() {
+        $("#showmoreprojects").text('hide');
+      });
+      more_projects_shown = true;
+    } else {
+      $("#moreprojects").slideUp('fast', function() {
+        $("#showmoreprojects").text('show more');
+      });
+      more_projects_shown = false;
+    }
+
+ //   });
+  }
+  </script>
   </body>
 </html>
