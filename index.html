@@ -377,6 +377,37 @@ tion accuracy.	</div>
 	   
 
 	</div>
+    </div>  <!--row-->
+
+    <div class="showmore" id="showmorepubs">
+       showmore
+       </div>
+
+    <div id="morepubs">
+    	<div class="row">
+    		<div class="col-md-6">
+    			<div class="ts">
+			     <a href="images/FPGA.jpg">FPGA Embedded Application Programmer Certificate
+			     </a>
+			    </div>
+
+
+
+			    <div class="ts">
+			     <a href="images/FPGA.jpg">FPGA Embedded Application Programmer Certificate
+			     </a>
+			    </div>
+
+
+			    <div class="ts">
+			     <a href="images/FPGA.jpg">FPGA Embedded Application Programmer Certificate
+			     </a>
+			    </div>
+
+
+
+    		</div>
+    	</div>
     </div>
 
 </div>
@@ -470,14 +501,13 @@ tion accuracy.	</div>
 
   <!--place js at the end-->
   <scipt src="js/jquery-1.11.1.min.js"></scipt>
-  <script src="js/bootstrap.min.js"></script>>
+  <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" language="javascript">
 
-
+  //
   var more_projects_shown = false;
-
-  function start() {
-   // ("#showmoreprojects").click(function(){
+function start() {
+  $("#showmoreprojects").click(function() {
     if(!more_projects_shown) {
       $("#moreprojects").slideDown('fast', function() {
         $("#showmoreprojects").text('hide');
@@ -489,9 +519,26 @@ tion accuracy.	</div>
       });
       more_projects_shown = false;
     }
+  });
 
- //   });
-  }
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more');
+      });
+      more_pubs_shown = false;
+    }
+  });
+
+}
+
+  //
   </script>
   </body>
 </html>
