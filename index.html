@@ -503,7 +503,7 @@ tion accuracy.	</div>
 
   //
   var more_projects_shown = false;
-function start() {
+$(document).ready(function() {
   $("#showmoreprojects").click(function() {
     if(!more_projects_shown) {
       $("#moreprojects").slideDown('fast', function() {
