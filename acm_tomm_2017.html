@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Unified Framework for Multi-Modal Isolated Gesture Recognition</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="css/ccbr_2016.css" />
+
+  <script>
+  function page_loaded() {
+  }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+<div id="header">
+   <h1>A Unified Framework for Multi-Modal Isolated Gesture Recognition</h1>
+</div>
+
+<!--
+<div id="teaser">
+</div>
+-->
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+
+  <div id="coursedesc">
+<p>In this paper, we focus on isolated gesture recognition and explore different modalities by involving
+RGB stream, depth stream and saliency stream for inspection. Our goal is to push the boundary of this
+realm even further by proposing a unified framework which exploits the advantages of multi-modality
+fusion. Specifically, a spatial-temporal network architecture based on consensus-voting has been pro-
+posed to explicitly model the long term structure of the video sequence and to reduce estimation vari-
+ance when confronted with comprehensive inter-class variations. In addition, a 3D depth-saliency con-
+volutional network is aggregated in parallel to capture subtle motion characteristics. Extensive experi-
+ments are done to analyze the performance of each component and our proposed approach achieves the
+best results on two public benchmarks–ChaLearn IsoGD and RGBD-HuDaAct, outperforming the clos-
+est competitor by a margin of over 10% and 15% respectively.</p>
+  </div>
+</div>
+</div>
+
+<div class="container sec">
+
+<div style="text-align:center;">
+<a href="ACM-TOMM/ACM-TOMM.pdf">
+  <div id="paper" >
+    <ul>
+      <li><img src="accv/accv1.png" width="5%"></li>
+      <li><img src="accv/accv2.png" width="5%"></li>
+      <li><img src="accv/accv3.png" width="5%"></li>
+      <li><img src="accv/accv4.png" width="5%"></li>
+      <li><img src="accv/accv5.png" width="5%"></li>
+      <li><img src="accv/accv6.png" width="5%"></li>
+      <li><img src="accv/accv7.png" width="5%"></li>
+      <li><img src="accv/accv8.png" width="5%"></li>
+    </ul>
+  </div>
+</a>
+</div>
+
+<br><br>
+<div>
+  <div class="instructor">
+    <a href="https://davidsonic.github.io/index/">
+    <div class="instructorphoto"><img src="djl2.jpg" style="height:120px;width=100px;"></div>
+    <div>Jiali Duan</div>
+    </a>
+  </div>
+  <div class="instructor">
+    <a href="http://www.cbsr.ia.ac.cn/users/jwan/">
+    <div class="instructorphoto"><img src="ACM-TOMM/junwan.png" style="height:120px;width=100px;"></div>
+    <div>Jun Wan</div>
+    </a>
+  </div>
+  <div class="instructor">
+    <a href="http://www.cbsr.ia.ac.cn/users/szli/">
+    <div class="instructorphoto"><img src="stanzli.jpg" style="height:120px;width=100px;"></div>
+    <div>Stan Z.Li</div>
+    </a>
+  </div>
+</div>
+
+Jiali Duan is currently a master student at Univeristy of Chinese Academy of Sciences
+<div style="color:#900;">
+ ACM-TOMM 2017 Accepted 
+</div>
+
+</div>
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+
+    <div class="col-md-5">
+      <h2>Code and Extras</h2>
+      Find additional resources on  <a href="">Github</a>, soon:
+      <ul>
+        <li>Pretrained Model</li>
+        <li>Training code</li>
+        <li>Evaluation code</li>
+      </ul>
+    </div>
+    <div class="col-md-7">
+      <h2>Bibtex</h2>
+<pre style="font-size:12px;">
+@inproceedings{Isolated Gesture Recognition,
+  title={A Unified Framework for Multi-Modal Isolated Gesture Recogntion},
+  author={Jiali Duan, Jun Wan, Shuai Zhou, Xiaoyuan Guo, and Stan Z. Li},
+  conference={ACM-TOMM},
+  year={2017}
+}
+</pre>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="container sec">
+  <h2>Gesture Recognition Framework</h2>
+ <p> Below is an overview of the proposed AVC face detection method. It includes
+three main steps in the detection phase: visible component detection step, local
+region competition step, and the local to global aggregation step. AVC works
+by detecting only the visible components which would be later aggregated to
+represent the whole face.</p>
+<p>Two half-view facial component detectors are trained,
+and for this we introduce a pose-invariant component definition via a regression
+based local landmark alignment, which is crucial for training sample cropping
+and pose-invariant component detection. Then the two learned detectors are
+mirrored to detect the other half view of the facial components. Next, the de-
+tected visible facial components go through a local region competition module to alleviate false detections, and finally a local to global aggregation strategy is
+applied to detect the whole face adaptively.
+</p>
+  <br>
+  <br><br>
+   <div style="width:100%; margin-left: auto; margin-right:auto; text-align:center;">
+			<img src="accv/pipeline.png" width="80%" >
+   </div>
+<br>
+ <h2>Pose-invariant Component Mapping</h2>
+  <p>Samples in AFLW consist of 21 landmarks. We first calculate the mean shape
+of the whole database with samples normalized and missing coordinates excluded. Region in the mean shape which we want to map ie. left eyebrow and left
+eye for LE component is mapped directly to a new input sample by applying the
+transformation</p>
+<br>
+<div style="width:100%; text-align:center;">
+<img src="accv/math1.png" style="width:80%">
+</div>
+<br>
+<p>Closed form solution can be derived as the following:</p>
+  <br><br>
+  <div style="width:100%; text-align:center;">
+	<img src="accv/math2.png" style="width:80%">
+  </div>
+
+<br><br>
+<p>An intuitive visual interpretation is shown below, blue points are
+annotated landmarks while red points are mapped from meanshape. Positive
+samples extracted in this way retain excellent uniformity, which would be used
+for training LE and LM component detector. </p>
+<br><br>
+  <div style="width:100%; text-align:center;">
+	<img src="accv/map1.png" style="width:60%">
+	<img src="accv/map2.png" style="width:60%">
+  </div>
+<br><br>
+<p>The pose-invariant component
+mapping method is also used for preparing negative samples for bootstrapping</p>
+<br><br>
+  <div style="width:100%; text-align:center;">
+	<img src="accv/map3.png" style="width:80%">
+  </div>
+
+<h2>Training procedure</h2>
+<p><b>Feature:</b> We choose NPD as our feature mainly for its two properties:
+illumination invariant and fast in speed because each computation involves only
+two pixels. For an image with size p = w × h , the number of features computed
+is C p 2 which can be computed beforehand, leading to superiority in speed for
+real world applications. With the scale-invariance property of NPD, the facial
+component detector is expected to be robust against illumination changes which
+is important in practice.</p>
+
+<p><b>Training framework:</b> The Deep Quadratic Tree (DQT) is used as
+weak classifier which learns two thresholds and is deeper compared to typical
+tree classifiers. Soft-Cascade as well as hard-negative mining are applied for
+cascade training. While individual NPD features may be ”weak”, the Gentle
+AdaBoost algorithm is utilized to learn a subset of NPD features organized in
+DQT for stronger discriminative ability.</p>
+
+<h2>Local to Global Aggregation</h2>
+<p><b>Symmetric Component Detection:</b> Below shows some example outputs by LE and LM detector respectively. As can be seen, our component-based detector has the inherent advantages under occa-
+sions of occlusions and pose-variations, where a holistic
+detector would normally fail. The detection of right eyebrow + right eye (RE)
+and right mouth + right nose (RM) can be achieved by deploying the detector
+of their left counterpart.</p>
+<br><br>
+  <div style="width:100%; text-align:center;">
+	<img src="accv/symmetric.png" style="width:60%">
+  </div>
+<br><br>
+<p><b>Local Region Competition:</b> The core
+idea is to reject false alarms during merging (compete) while improving localization accuracy during aggregation (collaborate).</p>
+<p><b>Aggregation Strategy:</b> After deploying competitive strategy to exclude possible false positives, the task
+now is to ensure accurate localization of detection outputs. This is achieved by
+taking the full use of information from rects of different regions. We use rectangle
+as facial representation. Note that our proposed pipeline also applies to elliptical
+representation as the aforementioned workflow remains unchanged. (<a href="accv/local_region.png">diagram</a>)</p>
+<h2>Experimental Results</h2>
+<p><b>AFW Result:</b> We compare
+AVC with both academic methods like DPM, HeadHunter, Structured Models
+and commercial systems like Face++ and Picasa. As can be seen from the figure,
+AVC outperforms DPM and is superior or equal to Face++ and Google Picasa.
+The precision of AVC is 98.68% with a recall of 97.13%, and the AP of AVC is
+98.08%, which is comparable with the state-of-the-art methods. Example detec-
+tion results are shown in the first row of Fig 8, note that we output rectangle
+for evaluation on AFW. </p>
+<br><br>
+  <div style="width:100%; text-align:center;">
+	<img src="accv/AFW_NEW_SMALL.png" style="width:40%">
+	<img src="accv/AFW_NEW_BIG.png" style="width:40%">
+  </div>
+<br><br>
+<p><b>FDDB Result:</b> We compare our results with the latest published methods on FD-
+DB including MTCNN, DP2MFD, Faceness-Net and Hyperface. Ours performs
+worse than MTCNN and DP2MFD which resort to powerful yet complex CN-
+N features but is better than Faceness-Net, which is also component-based but
+with the help of CNN structure. AVC gets 84.4% detection rate at FP=100, and a detection rate of 89.0% at FP=300. </p>
+<br><br>
+  <div style="width:100%; text-align:center;">	
+	<img src="accv/FDDB_NEW_SMALL.png" style="width:40%">
+	<img src="accv/FDDB_NEW_BIG.png" style="width:40%">
+  </div>
+<br><br>
+<p><b>Some Qualitative Results:</b></p>	
+
+<br><br>
+  <div style="width:100%; text-align:center;">	
+	<img src="accv/LE.png" style="width:60%">
+	<br><div style="text-align:center;">Proposed LE Detector</div>
+	<img src="accv/LM.png" style="width:60%">
+	<br><div style="text-align:center;">Proposed LM Detector</div>
+  </div>
+  <br><br>
+  <div style="width:100%; text-align:center;">	
+	<img src="accv/final_result.png" style="width:60%">
+	<br><div style="text-align:center;">1st row shows results on AFW with rectangular representation <br>and 2nd/3rd rows show results on FDDB with Elliptical representation</div>
+  </div>
+<br><br>
+<h2>Conclusions</h2>
+<p>In this paper, we proposed a new method called AVC highlighting component-
+based face detection, which addresses pose variations and occlusions simultane-
+ously in a single framework with low complexity. We show a consistent compo-
+nent definition which helps to achieve pose-invariant component detection. To
+handle facial occlusions, we only detect visible facial components, and build a
+local to global aggregation strategy to detect the whole face adaptively. Exper-
+iments on the FDDB and AFW databases show that the proposed method is
+robust in handling illuminations, occlusions and pose-variations, achieving much
+better performance but lower model complexity compared to the corresponding
+holistic face detector. The proposed face detector is able to output local facial
+components as well as meanshape landmarks, which may be helpful in landmark
+detection initialization and pose estimation. We will leave it as future work for
+investigation.</p>
+</div>
+<div class="sechighlight">
+<div id="footer">
+This work was supported by the National Key Research
+and Development Plan (Grant No.2016YFC0801002), the Chinese National Nat-
+ural Science Foundation Projects #61672521, #61473291, #61572501, #61502491,
+#61572536, NVIDIA GPU donation program and AuthenMetric R&D Funds.
+</div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
