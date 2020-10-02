@@ -198,7 +198,49 @@
   <h2>Publications</h2>
   <div id="pubs">
 
-       <div class="pubwrap">
+       <!--WACV PortraitGAN-->
+      <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+
+	    <br>
+            <img src="papers/curri/curri-rl-cover.png" style="height:500; width:auto;">
+            <img src="papers/curri/curri-rl-env.png" style="height:500; width:auto;">
+	    <br><br>
+          </div>
+        </div>  <!--col-md-6-->
+
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt"><b>Challenge Reinforcement Learning with Interactive Curriculum</b></div>
+            <div class="pubd">Curriculum reinforcement learning benefits training by focusing on examples of gradual increasing difficulty
+                that are neither too hard nor too easy~\footnote{\cite{bengio2009curriculum} pointed out with empirical experiments that examples
+                which are ``too easy'' do not help much to improve the model, whereas examples considered ``too difficult'' would not be captured
+                by small change in the model.}. However, it's not always intuitive to define a curriculum that lies within this ``range of interest''.
+                On one end of spectrum, a SOTA algorithm that learns from scratch may fail to collect any reinforcing signal. While on the other end,
+                an automatic task-agnostic curriculum could ``overfit'' in an early phase that prevents it from further adaptation. In contrast,
+                human has an innate ability to improvise and adapt when confronted with different scenarios, which we utilize to provide
+                explainability and guidance for curriculum reinforcement learning. We first identify the ``inertial'' problem in automatic curriculum
+                and then propose a simple interactive curriculum framework that works in environments that require millions of interactions. Demo
+                and executable is available\footnote{https://github.com/davidsonic/interactive-curriculum-reinforcement-learning}.</div>
+
+            <div class="puba">Jiali Duan, Yilei Zeng, Yang Li, Emilio Ferrara, Lerrel Pinto, C.-C. Jay Kuo, Stefanos Nikolaidis</div>
+            <div class="pubv">Preprint</div>
+            <div class="publ">
+              <ul>
+                <li><a href="papers/curri/curriculum-rl.pdf">PDF</a></li>
+              </ul>
+            </div>
+
+          </div>  <!--pub-->
+     </div>  <!--col-md-6-->
+    </div> <!--row-->
+   </div> <!--pubwrap-->
+      <!--PortraitGAN-->
+
+      <!--SCMLS-->
+      <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
@@ -233,6 +275,45 @@
     </div> <!--row-->
    </div> <!--pubwrap-->
       <!--SCMLS-->
+
+          <!--WACV PortraitGAN-->
+      <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+
+	    <br>
+            <img src="wacv/framework2.png" style="height:500; width:auto;">
+            <img src="wacv/interact.png" style="height:500; width:auto;">
+	    <br><br>
+          </div>
+        </div>  <!--col-md-6-->
+
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt"><b>PortraitGAN for Flexible Portrait Manipulation</b></div>
+            <div class="pubd">Previous methods have dealt with discrete manipulation of facial attributes such as smile, sad, angry, surprise etc, out of
+                canonical expressions and they are not scalable, operating in single modality. In this paper, we propose a novel framework that supports
+                continuous edits and multi-modality portrait manipulation using adversarial learning. Specifically, we adapt cycle-consistency
+                into the conditional setting by leveraging additional facial landmarks information. This has two effects: first cycle mapping induces
+                bidirectional manipulation and identity preserving; second pairing samples from different modalities can thus be utilized. To ensure
+                high-quality synthesis, we adopt texture-loss that enforces texture consistency and multi-level adversarial supervision that facilitates
+                gradient flow. Quantitative and qualitative experiments show the effectiveness of our framework in performing flexible and multi-modality
+                portrait manipulation with photo-realistic effects. </div>
+
+            <div class="puba">Jiali Duan, Xiaoyuan Guo, and C.C-Jay Kuo</div>
+            <div class="pubv">APSIPA 2020</div>
+            <div class="publ">
+              <ul>
+                <li><a href="papers/PortraitGAN-final.pdf">PDF</a></li>
+              </ul>
+            </div>
+
+          </div>  <!--pub-->
+     </div>  <!--col-md-6-->
+    </div> <!--row-->
+   </div> <!--pubwrap-->
+      <!--PortraitGAN-->
 
 
       <!--IROS-->
@@ -380,44 +461,6 @@ are trained by backpropagation (BP). The training process is complex and the und
    </div> <!--pubwrap-->
       <!--Yzhu-->
 
-      <!--WACV PortraitGAN-->
-      <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-
-	    <br>
-            <img src="wacv/framework2.png" style="height:500; width:auto;">
-            <img src="wacv/interact.png" style="height:500; width:auto;">
-	    <br><br>
-          </div>
-        </div>  <!--col-md-6-->
-
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt"><b>PortraitGAN for Flexible Portrait Manipulation</b></div>
-            <div class="pubd">Previous methods have dealt with discrete manipulation of facial attributes such as smile, sad, angry, surprise etc, out of
-                canonical expressions and they are not scalable, operating in single modality. In this paper, we propose a novel framework that supports
-                continuous edits and multi-modality portrait manipulation using adversarial learning. Specifically, we adapt cycle-consistency
-                into the conditional setting by leveraging additional facial landmarks information. This has two effects: first cycle mapping induces
-                bidirectional manipulation and identity preserving; second pairing samples from different modalities can thus be utilized. To ensure
-                high-quality synthesis, we adopt texture-loss that enforces texture consistency and multi-level adversarial supervision that facilitates
-                gradient flow. Quantitative and qualitative experiments show the effectiveness of our framework in performing flexible and multi-modality
-                portrait manipulation with photo-realistic effects. </div>
-
-            <div class="puba">Jiali Duan, Xiaoyuan Guo, and C.C-Jay Kuo</div>
-            <div class="pubv">APSIPA 2020</div>
-            <div class="publ">
-              <ul>
-                <li><a href="papers/PortraitGAN-final.pdf">PDF</a></li>
-              </ul>
-            </div>
-
-          </div>  <!--pub-->
-     </div>  <!--col-md-6-->
-    </div> <!--row-->
-   </div> <!--pubwrap-->
-      <!--PortraitGAN-->
   	
   <!--ACM-TOMM 2017-->
   
