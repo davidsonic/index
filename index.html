@@ -28,13 +28,13 @@
     <img src="images/djl3.jpg" class="img-circle imgme" style="height:200px; width=250px;">
     <div id="headertext">
       <div id="htname">Jiali Duan</div>
-      <div id="htdesc">PhD</div>
-      <div id="htdesc">University of Southern California</div>
-      <div id="htem">jialidua@usc.edu</div>
+      <div id="htdesc" style="font-weight:300">Applied Scientist II</div>
+      <div id="htdesc" style="font-weight:300">Amazon M5 Search Science & AI</div>
+      <div id="htem" style="font-weight:200">duajiali@amazon.com</div>
         <div id="htem">
-            <a href="Jiali_Duan_2021.pdf">Resume</a>&nbsp;&nbsp;
-            <a href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a>&nbsp;&nbsp;
-            <a href="https://scholar.google.com/citations?user=SjcMvxwAAAAJ&hl=en">Google Scholar</a></div>
+            <a class="header-link" href="Jiali_Duan_2021_October.pdf">Resume</a>&nbsp;&nbsp;
+            <a class="header-link" href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a>&nbsp;&nbsp;
+            <a class="header-link" href="https://scholar.google.com/citations?user=SjcMvxwAAAAJ&hl=en">Google Scholar</a></div>
     </div>
   </div>
 </div>
@@ -53,9 +53,11 @@
         <!--<div class="tdesc"><i>Explainable Graph Network for Recommendation</i><br> <a href="https://cseweb.ucsd.edu/~jmcauley/workshops/scmls20/">SCMLS 2020</a></div>-->
     <!--</div>-->
     <div class="timelineitem">
-      <div class="tdate">2021.06</div>
+      <div class="tdate">2021.06 - Now</div>
       <div class="ttitle">Amazon</div>
-      <div class="tdesc"><i>Applied Scientist</i><br><i>Palo Alto, Bay Area</i></div>
+      <div class="tdesc">10/21 - Now&nbsp; M5 Search Science & AI</div>
+      <div class="tdesc">06/21 - 09/21 Visual Search & AR</div>
+      <div class="tdesc"><i>Applied Scientist II</i><br><i>Palo Alto, Bay Area</i></div>
     </div>
     <div class="timelineitem">
       <div class="tdate">2017.09 - 2021.05</div>
@@ -133,13 +135,12 @@
 <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
   
 <b>Personal Introduction</b>
-    <p>I'm currently a PhD at University of Southern California under the supervision of Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>.
-    Before that, I completed my master degree with honor (Presidential Scholarship) under the guidance of Prof. <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a>,
+    <p>I'm currently an Applied Scientist at Amazon Search Science & AI, M5 Core Modeling Team. Before that, I obtained my PhD at University of Southern California under the supervision of Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>.
+    I completed my master degree with honor (Presidential Scholarship) under the guidance of Prof. <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a>,
     <a href="http://www.cbsr.ia.ac.cn/users/scliao/">Shengcai Liao</a> and <a href="http://www.cbsr.ia.ac.cn/users/jwan/">Jun Wan</a>
     at Institute of Automation, Chinese Academy of Sciences. I have also interned at <a href="https://www.sensetime.com/">SenseTime</a> working with Dr. <a href="https://shijianping.me/">Jianping Shi</a> and <a href="https://www.a9.com/">Amazon A9</a> with Principal Applied Scientist Son Tran.
     My personal blog is <a href="https://davidsonic.github.io/academic_blog/">here</a> and
     I also write <a href="https://davidsonic.github.io/">coding blogs</a> during spare time.</p>
-
 </div>
 
 
@@ -148,6 +149,15 @@
   <div class="row">
     <h3>Recent News</h3>
     </div>
+        <div class="news_new_code">
+          Just joined M5 Core Modeling at Search Science & AI at Amazon. 
+        </div>
+        <div class="news_new_paper">
+            Our paper "Interpretable convolutional neural networks via feedforward design" wins Best Paper Award for JVCI, 2021 <a href="http://mcl.usc.edu/people/cckuo/honors-and-awards/">Link</a>
+        </div>
+        <div class="news_new_code">
+            Our survey paper "Bridging Gap between Image Pixels and Semantics via Supervision: A Survey" has been accepted at APSIPA 2021 <a href="https://arxiv.org/abs/2107.13757">Link</a>
+        </div>
         <div class="news_new_paper">
             The video, slides and poster for our CVPR 2021 paper are now available!
         </div>
@@ -182,6 +192,51 @@
 <div class="container">
   <h2>Publications</h2>
   <div id="pubs">
+
+       <!--Survey Paper-->
+       <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+  
+        <br>
+              <img src="papers/bridge-semantics/semantics.png" style="height:500; width:auto;">
+        <br><br>
+            </div>
+          </div>  <!--col-md-6-->
+  
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt"><b>Bridging Gap between Image Pixels and 
+                Semantics via Supervision: A Survey</b></div>
+              <div class="pubd">The fact that there exists a gap between low-level features and semantic
+                meanings of images, called the semantic gap, is known for decades.
+                Resolution of the semantic gap is a long standing problem.  The semantic
+                gap problem is reviewed and a survey on recent efforts in bridging the
+                gap is made in this work. Most importantly, we claim that the semantic
+                gap is primarily bridged through supervised learning today.  Experiences
+                are drawn from two application domains to illustrate this point: 1)
+                object detection and 2) metric learning for content-based image
+                retrieval (CBIR). To begin with, this paper offers a historical
+                retrospective on supervision, makes a gradual transition to the modern
+                data-driven methodology and introduces commonly used datasets.  Then, it
+                summarizes various supervision methods to bridge the semantic gap in the
+                context of object detection and metric learning. 
+                </div>
+  
+              <div class="puba">Jiali Duan, C.-C. Jay Kuo</div>
+              <div class="pubv">APSIPA, 2021</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2107.13757">PDF</a></li>
+                </ul>
+              </div>
+  
+            </div>  <!--pub-->
+       </div>  <!--col-md-6-->
+      </div> <!--row-->
+     </div> <!--pubwrap-->
+
       <!--CVPR2021-->
       <div class="pubwrap">
       <div class="row">
@@ -451,7 +506,7 @@ transform. It is a variant of the principal component analysis (PCA) with an add
 MNIST and the CIFAR-10 datasets are compared. Finally, we comment on the relationship between BP and FF designs.</div>
 
             <div class="puba">C.-C. Jay Kuo, Min Zhang, Siyang Li, Jiali Duan and Yueru Chen</div>
-            <div class="pubv">JVCI 2019</div>
+            <div class="pubv">JVCI 2019 (Best Paper Award of JVCI 2021)</div>
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/pdf/1810.02786.pdf">PDF</a></li>
@@ -602,7 +657,7 @@ the participation of other related researchers.</div>
             <div class="pubv">CCBR 2016 (Best Student Paper) </div>
             <div class="publ">
               <ul>
-                <li><a href="https://davidsonic.github.io/index/ccbr_2016.html">Project</a></li>
+                <li><a href="ccbr_2016.html">Project</a></li>
                 <li><a href="ccbr/ccbr2016.pdf">PDF</a></li>
 		        <li><a href="https://github.com/davidsonic/face_classification_ccbr2016">Code (Github)</a></li>
                 <li><a href="ccbr/FCB-CCBR2016.pptx">Presentation</a></li>
