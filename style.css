@@ -563,7 +563,7 @@ a:hover, a:visited, a:link, a:active
 /* End of Navbar */
 
 /* Home */
-.section-home {
+.section-1 {
   width: 100%;
   height: 100vh;
   padding: 0rem 0 0rem 0;
@@ -574,7 +574,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 /* About */
-.section-1 {
+.section-2 {
   width: 100%;
   height: 100%;
   padding: 10rem 0 10rem 0;
@@ -585,7 +585,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 /* Recent News */
-.section-2 {
+.section-3 {
   width: 100%;
   height: 100%;
   padding: 5rem 0 10rem 0;
@@ -596,7 +596,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 /* publication */
-.section-3 {
+.section-4 {
   width: 100%;
   padding: 5rem 0;
   background-color: #eef;
@@ -606,7 +606,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 /* Competition */
-.section-4 {
+.section-5 {
   width: 100%;
   padding: 5rem 0;
   background-color: #fff;
@@ -617,7 +617,7 @@ a:hover, a:visited, a:link, a:active
 
 /* footer */
 
-.section-5 {
+.section-6 {
   width: 100%;
   height: 10vh;
   background-color: #222;
@@ -625,18 +625,18 @@ a:hover, a:visited, a:link, a:active
   position: relative;
 }
 
-.section-5-text {
+.section-6-text {
   text-transform: uppercase;
   text-align: center; 
 }
 
-.section-5-heading {
+.section-6-heading {
   font-size: 3rem;
   font-weight: 900;
   color: #a79a2d;
 }
 
-.section-5-paragraph {
+.section-6-paragraph {
   font-size: 1.5rem;
   color: #888;
 }
