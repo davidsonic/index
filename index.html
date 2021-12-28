@@ -16,9 +16,30 @@
     <title>Jiali Duan's Academic Site</title>
   </head>
 
-  <body>
+<body>
+
+<!-- spinner -->
+<div class="spinner-container">
+  <div class="circles">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
 
 <div class="bg-container">
+  <div class="hamburger-menu">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+    <span>Close</span>
+  </div>
+
   <header class="bg-header">
     <div class="bg-img-wrapper">
       <img src="bg-ground.jpeg" />
@@ -31,27 +52,55 @@
       <a href="#section-home">Scroll</a>
     </div>
   </header>
+
+  <!-- sidebar -->
+  <section class="sidebar">
+    <ul class="menu">
+      <li class="menu-item">
+        <a href="#section-home" class="menu-link" data-content="Intro">Intro</a>
+      </li>
+      <li class="menu-item">
+        <a href="#section-3" class="menu-link" data-content="Publications">Publications</a>
+      </li>
+      <li class="menu-item">
+        <a href="https://davidsonic.github.io/academic_blog/" class="menu-link" data-content="PhD Life">PhD Life</a>
+      </li>
+      <li class="menu-item">
+        <a href="https://davidsonic.github.io/" class="menu-link" data-content="Algos">Algos</a>
+      </li>
+      <li class="menu-item">
+        <a href="https://www.linkedin.com/in/jiali-duan-bb5917167/" class="menu-link" data-content="Linkdedin">Linkedin</a>
+      </li>
+    </ul>
+    <div class="social-media">
+      <a href="https://davidsonic.github.io/"><i class="fab fa-laptop-code"></i></a>
+      <a href="https://davidsonic.github.io/academic_blog/"><i class="fas fa-file-powerpoint"></i></a>
+      <a href="https://www.linkedin.com/in/jiali-duan-bb5917167/"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
   
 </div>
 
-<!-- Navbar -->
-<nav class="navbar center">
-  <a href="#section-home" class="navbar-link">Home</a>
-  <a href="#section-1" class="navbar-link">About</a>
-  <a href="#section-2" class="navbar-link">Recent News</a>
-  <a href="#section-3" class="navbar-link">Publication</a>
-  <a href="#section-4" class="navbar-link">Competition</a>
-  <a href="#section-5" class="navbar-link">Contact</a>
-</nav>
 
 <!-- HEADER -->
 <section class="section-home" id="section-home">
+
+  <!-- Navbar -->
+  <nav class="navbar center">
+    <a href="#section-home" class="navbar-link">Home</a>
+    <a href="#section-1" class="navbar-link">About</a>
+    <a href="#section-2" class="navbar-link">Recent News</a>
+    <a href="#section-3" class="navbar-link">Publication</a>
+    <a href="#section-4" class="navbar-link">Competition</a>
+    <a href="#section-5" class="navbar-link">Contact</a>
+  </nav>
+
   <div id="header" class="bg1">
-    <div id="topnav">
+    <!-- <div id="topnav">
       <ul>
         <li><a href="https://davidsonic.github.io/academic_blog/">Blog</a></li>
       </ul>
-    </div>
+    </div> -->
     <div id="headerblob">
       <img src="images/djl3.jpg" class="img-circle imgme" style="height:200px; width=250px;">
       <div id="headertext">
@@ -60,13 +109,14 @@
         <div id="htdesc" style="font-weight:300">Amazon M5 Search Science & AI</div>
         <div id="htem" style="font-weight:200">duajiali@amazon.com</div>
           <div id="htem">
-              <a class="header-link" href="Jiali_Duan_2021_October.pdf">Resume</a>&nbsp;&nbsp;
+              <a class="header-link" href="Jiali_Duan_2021_Dec.pdf">Resume</a>&nbsp;&nbsp;
               <a class="header-link" href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a>&nbsp;&nbsp;
               <a class="header-link" href="https://scholar.google.com/citations?user=SjcMvxwAAAAJ&hl=en">Google Scholar</a></div>
       </div>
     </div>
   </div>
 
+  <!-- research interests -->
   <div class="projects">
     <div class="section-header">
       <h2 class="section-heading">Research Interests</h2>
@@ -1189,7 +1239,7 @@
   <div class="section-5-text">
       <h2 class="section-5-heading"></h2>
   </div>
-  <p class="copyright">jli.duan@gmail.com &copy; All rights reserved</p>
+  <p class="copyright">jli.duan@gmail.com &copy; Last updated December 2021</p>
 </section>
 
 
@@ -1235,5 +1285,6 @@
   //
   </script>
   <script src="js/tilt.js"></script>
+  <script src="js/sidebar.js"></script>
   </body>
 </html>
