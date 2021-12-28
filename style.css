@@ -1,14 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+}
+
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #444;
+  scroll-behavior: smooth;
 }
 #header {
   width: 100%;
   height: 400px;
   font-weight: 300;
   color: white;
-  margin-bottom: 40px;
+  position: absolute;
 }
 
 .header-link{
@@ -32,7 +47,7 @@ html, body {
 #headerblob {
   position: absolute;
   left: 20%;
-  top: 165px;
+  top: 30%;
   width: 80%;
 }
 #headertext {
@@ -85,13 +100,13 @@ html, body {
   }
 }
 #topnav {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: absolute; 
   padding: 5px 10px 5px 10px;
-  margin: 10px;
+  margin-top: 5%;
+  margin-left: 95%;
   border: 1px solid #FFF;
 }
+
 #topnav a {
   color: white;
 }
@@ -203,7 +218,7 @@ li {
 .quote blockquote {
   font-size: 28px;
 }
-h2 {
+.container h2 {
   text-align: center;
   font-weight: 300;
   font-size: 50px;
@@ -367,3 +382,403 @@ hr.soft {
   margin-bottom: 5px;
   font-weight: 300;
 }
+
+/* Landing page */
+.bg-header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  perspective: 100rem;
+  overflow: hidden;
+}
+
+.bg-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+
+.bg-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  animation: scale 25s;
+}
+
+
+.banner {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  text-align:center;
+}
+
+.banner h1 {
+  font-family: serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #fff;
+  width: 100%;
+  line-height: 9rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.banner h2 {
+  font-family: serif;
+  font-size: 3rem;
+  color: #fff;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.banner h3 {
+  font-family: serif;
+  font-size: 2rem;
+  color: #fff;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.banner a:hover {
+  opacity: .5;
+}
+
+.banner a {
+  margin-top: 15%; 
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+  padding-top: 60px;
+}
+
+
+/* .banner a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+} */
+
+/* Navbar */
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 4rem;
+  background-color: #e41c6f;
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  position: absolute;
+  z-index: 300;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.navbar-link {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.change.navbar-link {
+  color: #fff;
+}
+
+.navbar-link:hover {
+  color: #fff;
+}
+
+.navbar-link::before {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  position: absolute;
+  right: -15%;
+  bottom: -0.3rem;
+  transition: width 0.2s;
+}
+
+.change.navbar-link::before {
+  width: 130%;
+}
+
+.navbar-link:hover::before {
+  width: 130%;
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-link {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+
+/* End of Navbar */
+
+/* Home */
+.section-home {
+  width: 100%;
+  height: 100vh;
+  padding: 0rem 0 0rem 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* About */
+.section-1 {
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0 10rem 0;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Recent News */
+.section-2 {
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0 10rem 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* publication */
+.section-3 {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Competition */
+.section-4 {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* footer */
+
+.section-5 {
+  width: 100%;
+  height: 10vh;
+  background-color: #222;
+  padding: 0rem 0;
+  position: relative;
+}
+
+.section-5-text {
+  text-transform: uppercase;
+  text-align: center; 
+}
+
+.section-5-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #a79a2d;
+}
+
+.section-5-paragraph {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: #eee;
+  letter-spacing: 0.1rem;
+  /* border-top: 0.1rem solid #888; */
+  padding-top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* end of footer */
+
+/* projects */
+.projects {
+  width: 70%; 
+  margin-top: 10rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7rem 0 0rem 0;
+  margin-top: 20%; 
+  z-index: 100; 
+}
+
+.section-heading {
+  font-family: "Muli", serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #4b4b4b;
+  margin-bottom: 6rem;
+}
+
+.underline {
+  width: 12rem;
+  height: 0.3rem;
+  background-color: #c29525;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.card {
+  width: 40rem;
+  height: 25rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  border-radius: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+  opacity: 0.5;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.card:hover .card-info {
+  bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-info h2 {
+  font-family: "Baloo Da 2", serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-info h3 {
+  font-family: "Muli", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #a52a2a;
+  margin-bottom: 1rem;
+}
+
+.card-info p {
+  font-family: "Baloo da 2", serif;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.card-info button {
+  width: 10rem;
+  height: 3rem;
+  background-color: #c29525;
+  border: none;
+  font-family: "Baloo Da 2", serif;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* end of projects */
