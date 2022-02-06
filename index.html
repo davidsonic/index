@@ -46,7 +46,6 @@
     </div>
 
     <div class="banner">
-      <!-- <h1>大白菜</h1> -->
       <h2>酒困路长惟欲睡，日高人渴漫思茶。</h2>
       <h3>《浣溪沙·簌簌衣巾落枣花》 - 宋代 - 苏轼</h3>
       <a href="#section-1">Scroll</a>
@@ -63,18 +62,21 @@
         <a href="#section-4" class="menu-link" data-content="Publications">Publications</a>
       </li>
       <li class="menu-item">
-        <a href="https://davidsonic.github.io/academic_blog/" class="menu-link" data-content="PhD Life">PhD Life</a>
+        <a href="https://davidsonic.github.io/academic_blog/" class="menu-link" data-content="Blogs">Blogs</a>
       </li>
       <li class="menu-item">
-        <a href="https://davidsonic.github.io/" class="menu-link" data-content="Algos">Algos</a>
+        <a href="https://davidsonic.github.io/" class="menu-link" data-content="Codes">Codes</a>
+      </li>
+      <li class="menu-item">
+        <a href="https://davidsonic.github.io/Reading_Posts/" class="menu-link" data-content="Readings">Readings</a>
       </li>
       <li class="menu-item">
         <a href="https://www.linkedin.com/in/jiali-duan-bb5917167/" class="menu-link" data-content="Linkdedin">Linkedin</a>
       </li>
     </ul>
     <div class="social-media">
-      <a href="https://davidsonic.github.io/"><i class="fab fa-laptop-code"></i></a>
-      <a href="https://davidsonic.github.io/academic_blog/"><i class="fas fa-file-powerpoint"></i></a>
+      <a href="https://davidsonic.github.io/"><i class="fab fa-github-alt"></i></a>
+      <a href="https://davidsonic.github.io/academic_blog/"><i class="fab fa-fly"></i></a>
       <a href="https://www.linkedin.com/in/jiali-duan-bb5917167/"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
@@ -94,164 +96,118 @@
     <a href="#section-5" class="navbar-link">Competition</a>
     <a href="#section-6" class="navbar-link">Contact</a>
   </nav>
+  <div class="photo-projects">
 
-  <div id="header" class="bg1">
-    <!-- <div id="topnav">
-      <ul>
-        <li><a href="https://davidsonic.github.io/academic_blog/">Blog</a></li>
-      </ul>
-    </div> -->
-    <div id="headerblob">
-      <img src="images/djl3.jpg" class="img-circle imgme" style="height:200px; width=250px;">
-      <div id="headertext">
-        <div id="htname">Jiali Duan</div>
-        <div id="htdesc" style="font-weight:300">Applied Scientist II</div>
-        <div id="htdesc" style="font-weight:300">Amazon M5 Search Science & AI</div>
-        <div id="htem" style="font-weight:200">duajiali@amazon.com</div>
-          <div id="htem">
-              <a class="header-link" href="Jiali_Duan_2021_Dec.pdf">Resume</a>&nbsp;&nbsp;
-              <a class="header-link" href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a>&nbsp;&nbsp;
-              <a class="header-link" href="https://scholar.google.com/citations?user=SjcMvxwAAAAJ&hl=en">Google Scholar</a></div>
+    <div id="header" class="bg1">
+      <div id="headerblob">
+        <img src="images/djl3.jpg" class="img-circle imgme" style="height:200px; width=250px;">
+        <div id="headertext">
+          <div id="htname">Jiali Duan</div>
+          <div id="htdesc" style="font-weight:300">Applied Scientist II</div>
+          <div id="htdesc" style="font-weight:300">Amazon M5 Search Science & AI</div>
+          <div id="htem" style="font-weight:200">duajiali@amazon.com</div>
+            <div id="htem">
+                <a class="header-link" href="Jiali_Duan_2021_Dec.pdf">Resume</a>&nbsp;&nbsp;
+                <a class="header-link" href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a>&nbsp;&nbsp;
+                <a class="header-link" href="https://scholar.google.com/citations?user=SjcMvxwAAAAJ&hl=en">Google Scholar</a></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- research interests -->
-  <div class="projects">
-    <div class="section-header">
-      <h2 class="section-heading">Research & Projects</h2>
-      <div class="underline"></div>
+    <!-- research interests -->
+    <div class="projects">
+      <!-- <div class="section-header">
+        <h2 class="section-heading">Research & Projects</h2>
+        <div class="underline"></div>
+      </div> -->
+      <div class="cards-wrapper">
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="images/openai-clip.png" alt="img" />
+          </div>
+          <div class="card-info">
+            <h3>Multimodal Learning</h3>
+            <p>
+              "CLIP, DALLE, VLP;"
+            </p>
+            <button><a href="SLADE/CUB200-demo.html">Read More</a></button>
+          </div>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="images/robot-adv.gif" alt="robot" />
+          </div>
+          <div class="card-info">
+            <h3>Robotic Learning</h3>
+            <p>
+              "Robotics, RL, GAN"
+            </p>
+            <button><a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">Read More</a></button>
+          </div>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="images/detection.jpeg" alt="detection" />
+          </div>
+          <div class="card-info">
+            <h3>Object Detection</h3>
+            <p>
+              "Open world, vocabulary, NMS-free"
+            </p>
+            <button><a href="accv_2016.html">Read More</a></button>
+          </div>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-img-wrapper">
+            <img src="images/torchserve.png" alt="detection" />
+          </div>
+          <div class="card-info">
+            <h3>Serverless AI</h3>
+            <p>
+              "Torchserve, SageMaker, AWS"
+            </p>
+            <button><a href="http://torchserve-aws-jiali-nodejs.herokuapp.com/">Read More</a></button>
+          </div>
+        </div>
+      </div>  
     </div>
-    <div class="cards-wrapper">
-      <div class="card" data-tilt>
-        <div class="card-img-wrapper">
-          <img src="images/openai-clip.png" alt="img" />
-        </div>
-        <div class="card-info">
-          <h3>Multi-modal Representation Learning</h3>
-          <p>
-            "Vision language pretraining, multi-modal fusion, transformers;"
-          </p>
-          <button><a href="SLADE/CUB200-demo.html">Read More</a></button>
-        </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="card-img-wrapper">
-          <img src="images/robot-adv.gif" alt="robot" />
-        </div>
-        <div class="card-info">
-          <h3>Adversarial Reinforcement Learning</h3>
-          <p>
-            "Robotics, Reinforcement Learning, Adversarial Learning"
-          </p>
-          <button><a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">Read More</a></button>
-        </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="card-img-wrapper">
-          <img src="images/detection.jpeg" alt="detection" />
-        </div>
-        <div class="card-info">
-          <h3>Object Detection</h3>
-          <p>
-            "Generic object detection, face detection, open-world object detection"
-          </p>
-          <button><a href="accv_2016.html">Read More</a></button>
-        </div>
-      </div>
-      <div class="card" data-tilt>
-        <div class="card-img-wrapper">
-          <img src="images/torchserve.png" alt="detection" />
-        </div>
-        <div class="card-info">
-          <h3>Serverless AI</h3>
-          <p>
-            "Torchserve Demo with SageMaker & AWS Lambda"
-          </p>
-          <button><a href="http://torchserve-aws-jiali-nodejs.herokuapp.com/">Read More</a></button>
-        </div>
-      </div>
-    </div>  
-  </div>
+
+  </div> 
 </section>
 
 
 <!--timeline-->
 <section class="section-2" id="section-2">
   <div class="container">
-      <div id="timeline">
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2020.01- 2020.03</div>-->
-        <!--<div class="ttitle">Interactive Curriculum Reinforcement Learning</div>-->
-      <!--</div>-->
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2019.09- 2019.12</div>-->
-        <!--<div class="ttitle">Fashion Compatibility Prediction</div>-->
-          <!--<div class="tdesc"><i>Explainable Graph Network for Recommendation</i><br> <a href="https://cseweb.ucsd.edu/~jmcauley/workshops/scmls20/">SCMLS 2020</a></div>-->
-      <!--</div>-->
+    <div id="timeline">
       <div class="timelineitem">
         <div class="tdate">2021.06 - Now</div>
-        <div class="ttitle">Amazon</div>
+        <div class="ttitle">Amazon Applied Scientist II</div>
         <div class="tdesc">10/21 - Now&nbsp; M5 Search Science & AI</div>
         <div class="tdesc">06/21 - 09/21 Visual Search & AR</div>
-        <div class="tdesc"><i>Applied Scientist II</i><br><i>Palo Alto, Bay Area</i></div>
+        <div class="tdesc">Palo Alto, Bay Area</div>
       </div>
       <div class="timelineitem">
         <div class="tdate">2017.09 - 2021.05</div>
         <div class="ttitle">University of Southern California</div>
-        <div class="ttitle">PhD Degree</div>
-        <div class="tdesc"><i>ECE Department</i></div>
+        <div class="tdesc">ECE PhD</div>
+        <!-- <div class="tdesc"><i>ECE Department</i></div> -->
       </div>
       <div class="timelineitem">
         <div class="tdate">2020.05 - 2021.01</div>
-        <div class="ttitle">Amazon A9 Internship</div>
-          <div class="tdesc"><i>Applied Science Intern</i><br><i>Semi/Self-Supervised Learning</i></div>
+        <div class="ttitle">Amazon Applied Science Intern</div>
+        <div class="tdesc">Semi/Self-Supervised Learning</div>
       </div>
       <div class="timelineitem">
         <div class="tdate">2019.06 - 2019.09</div>
         <div class="ttitle">Amazon A9 Internship</div>
-          <div class="tdesc"><i>Applied Science Intern</i><br><i>Graph-Convolution based Recommendation</i></div>
+          <div class="tdesc">Graph-Convolution based Recommendation</div>
       </div>
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2019.01- 2019.03</div>-->
-        <!--<div class="ttitle">Interactive Human-Robot Learning</div>-->
-        <!--<div class="tdesc"><i>Robot Learning via Human Adversarial Games</i><br>IROS 2019 (<a href="https://arxiv.org/abs/1903.00636">Best Paper Finalist</a>,<a href ="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">USC Coverage</a>)</div>-->
-      <!--</div>-->
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2018.12- 2019.03</div>-->
-        <!--<div class="ttitle">Robust Grasping</div>-->
-        <!--<div class="tdesc"><i>Robust Grasping via Human Adversary</i><br>SCR 2019 (<a href="http://scr2019.caltech.edu/">Spotlight</a>)</div>-->
-      <!--</div>-->
-    <!--<div class="timelineitem">-->
-      <!--<div class="tdate">2018.1 -2018.4 </div>-->
-      <!--<div class="ttitle">Generative Adversarial Network</div>-->
-      <!--<div class="tdesc"><i> PortraitGAN for Flexible Portrait Manipulation</i> <br> <a href="papers/PortraitGAN-final.pdf"> APSIPA 2020</a> </div>-->
-    <!--</div>-->
-    <div class="timelineitem">
-      <div class="tdate">2017.4 - 2017.7 </div>
-      <div class="ttitle">Sensetime Internship </div>
-        <div class="tdesc"><i> Real-time Portrait Segmentation</i></div>
-    </div>
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2016.12 - 2017.1 </div>-->
-        <!--<div class="ttitle">Depth Video Analysis</div>-->
-        <!--<div class="tdesc"><i>A Unified Framework for Multi-Modal <br>Isolated Gesture Recognition</i><br><a href="ACM-TOMM/ACM-TOMM.pdf">ACM-TOMM 2017</a></div>-->
-        <!--</div>-->
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2016.9 - 2016.11 </div>-->
-        <!--<div class="ttitle">Video Recognition</div>-->
-        <!--<div class="tdesc"><i>Multi-Modality Fusion based on Consensus-Voting and 3D Convolution for Isolated Gesture Recognition</i><br> <a href="https://arxiv.org/pdf/1611.06689v2.pdf">arxiv</a></div>-->
-        <!--</div>-->
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2016.6 - 2016.7</div>-->
-        <!--<div class="ttitle">Face classification benchmark</div>-->
-        <!--<div class="tdesc"><i>Face Classification: A Specialized Benchmark Study</i> <br> CCBR 2016 (<a href="ccbr/Best Student Paper.pdf">Best Student Paper</a>)</div>-->
-      <!--</div>-->
-      <!--<div class="timelineitem">-->
-        <!--<div class="tdate">2016.3 - 2016.6</div>-->
-        <!--<div class="ttitle">Face detection</div>-->
-        <!--<div class="tdesc"><i>Face Detection by Aggregating Visible Components</i> <br> ACCV Workshop 2016 (<a href="http://www2.docm.mmu.ac.uk/STAFF/m.yap/programme.php">Oral</a>) </div>-->
-      <!--</div>-->
+      <div class="timelineitem">
+        <div class="tdate">2017.4 - 2017.7 </div>
+        <div class="ttitle">Sensetime Internship </div>
+          <div class="tdesc">Real-time Portrait Segmentation</div>
+      </div>
       <div class="timelineitem">
         <div class="tdate">2015.9 - 2016.3</div>
         <div class="ttitle">AuthenMetic Internship</div>
@@ -260,31 +216,49 @@
       <div class="timelineitem">
       <div class="tdate">2014.9 - 2017.8</div>
         <div class="ttitle">Chinese Academy of Sciences</div>
-        <div class="ttitle">Master Degree</div>
+        <!-- <div class="ttitle">Master Degree</div> -->
         <div class="tdesc">National Laboratory of Pattern Recognition</div>
       </div>
-      </div>
+    </div> 
+    <!-- id=timeline -->
   </div>
-
-
+  <!-- container -->
   <hr class="soft">
 </section>
 
 <!-- Recent News -->
-  <section class="section-3" id="section-3">
+<section class="section-3" id="section-3">
   <!-- Personal introduction -->
-  <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <div class="container" style="font-size:18px;font-weight:300;margin-bottom:10px;">
     <div class="row">
       <h3>Personal Introduction</h3>
     </div>
-        <p>I'm currently an Applied Scientist at Amazon Search Science & AI. My major interests are multi-modal representation learning, recommendations and adversarial reinforcement learning. Before that, I obtained my PhD at University of Southern California under the supervision of Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>.
-        I completed my master degree with honor (Presidential Scholarship) under the guidance of Prof. <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a>,
+        <p>I'm an Applied Scientist at Amazon Search Science & AI. My major interests are multi-modal representation learning, object detection and robotic learning. I obtained my PhD at University of Southern California supervised by Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>, 
+        Master degree (Presidential Scholarship) supervised by Prof. <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a>,
         <a href="http://www.cbsr.ia.ac.cn/users/scliao/">Shengcai Liao</a> and <a href="http://www.cbsr.ia.ac.cn/users/jwan/">Jun Wan</a>
-        at Institute of Automation, Chinese Academy of Sciences. I have also interned at <a href="https://www.sensetime.com/">SenseTime</a> working with Dr. <a href="https://shijianping.me/">Jianping Shi</a> and <a href="https://www.a9.com/">Amazon A9</a> with Principal Applied Scientist Son Tran.
-        Blog records at USC: <a href="https://davidsonic.github.io/academic_blog/">link</a> and
-        and previous <a href="https://davidsonic.github.io/">coding blogs</a>.</p>
+        at Institute of Automation, Chinese Academy of Sciences. I have interned at <a href="https://www.sensetime.com/">SenseTime</a> with <a href="https://shijianping.me/">Jianping Shi</a> and <a href="https://www.a9.com/">Amazon Visual Search</a> with Son Tran.
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="https://davidsonic.github.io/academic_blog/">Blogs at USC</a></li>
+          <li class="breadcrumb-item"><a href="https://davidsonic.github.io/">Coding Blogs</a></li>
+          <li class="breadcrumb-item"><a href="https://davidsonic.github.io/Reading_Posts/">Reading Posts</a></li>
+          <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/jiali-duan-bb5917167/">Linkedin</a></li>
+      </ol>
   </div>
+  
 
+  <div class="container" style="font-size:18px;font-weight:300;margin-bottom:10px;">
+    <div class="row">
+      <h3>Academic Service</h3>
+    </div>
+    <div>
+        <p>
+          Serve in the Industrial Editorial Board for the APSIPA Trans. on Information and Signal Processing (ATSIP)
+        </p>
+        <p>
+          Reviewers: CVPR/ ICASSP/ WACV/ IEEE MM/ JVIS/ SIP/ JVIS
+        </p>
+    </div>
+  </div>
 
   <div class="container">
         <div class="row">
@@ -310,21 +284,18 @@
                 1 paper accepted by CVPR 2021
               </div>
               <div class="news_new_code">
-                Nov.06, 2019, Wired: If You Want a Robot to Learn Better, Be a Jerk to It <a href="https://www.wired.com/story/if-you-want-a-robot-to-learn-better-be-a-jerk-to-it/">Link</a>
-              </div>
-              <div class="news_new_paper">
                 Nov. 30, 2019, Express: AI breakthrough: Showing Machine Learning Robots ‘Tough Love’ Helps Them Improve <a href="https://www.express.co.uk/news/science/1210543/ai-artificial-intelligence-machine-learning-robots-tough-love-helps-them-improve">Link</a>
               </div>
-              <div class="news_new_code">
+              <!-- <div class="news_new_paper">
                 Nov.06, 2019, Wired: If You Want a Robot to Learn Better, Be a Jerk to It <a href="https://www.wired.com/story/if-you-want-a-robot-to-learn-better-be-a-jerk-to-it/">Link</a>
               </div>
-              <div class="news_new_paper">
-                Nov.06, 2019, Daily Mail: Tough Love! <a href="https://www.dailymail.co.uk/sciencetech/article-7656667/Tug-war-New-research-finds-robots-learn-effectively-humans-provide-physical-resistance.html">Link</a>
-              </div>
               <div class="news_new_code">
+                Nov.06, 2019, Daily Mail: Tough Love! <a href="https://www.dailymail.co.uk/sciencetech/article-7656667/Tug-war-New-research-finds-robots-learn-effectively-humans-provide-physical-resistance.html">Link</a>
+              </div> -->
+              <div class="news_new_paper">
                 Nov.06, 2019, USC News: Showing Robots ‘Tough Love’ Helps them Succeed, Finds New USC Study <a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">Link</a>
               </div>
-              <div class="news_new_paper">
+              <div class="news_new_code">
                 1 paper nominated as Best Paper Finalist in IROS 2019
               </div>
       </div>
@@ -364,7 +335,7 @@
                 We also provide computational experiments to showcase the effectiveness of our approach.
                 </div>
   
-              <div class="puba">Dongsheng Ding, Kaiqing Zhang, Jiali Duan, Tamer Bacsar, Mihailo R. Jovanovic</div>
+              <div class="puba">Dongsheng Ding, Kaiqing Zhang, <span class="pubme">Jiali Duan</span>, Tamer Bacsar, Mihailo R. Jovanovic</div>
               <div class="pubv">JMLR Under Review, 2021</div>
               <div class="publ">
                 <ul>
@@ -403,7 +374,7 @@
                 optimizing the cluster centers. To further smooth out the learning process, we adopt a teacher-student distillation paradigm, where the momentum teacher of one view guides the student learning of the other. We evaluated our approach on common vision language benchmarks and obtain new SoTA on zero-shot cross modality retrieval while being competitive on various other transfer tasks.
                 </div>
   
-              <div class="puba">Jiali Duan, Liqun Chen, Son Tran, Jinyu Yang, Yi Xu, Belinda Zeng, Trishul Chilimbi</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Liqun Chen, Son Tran, Jinyu Yang, Yi Xu, Belinda Zeng, Trishul Chilimbi</div>
               <div class="pubv">Under Review, 2021</div>
               <div class="publ">
                 <ul>
@@ -440,7 +411,7 @@
               and achieve the new state of the art on various common down-stream 
               vision-language tasks such as image-text retrieval and visual question answering.
             </div>
-            <div class="puba">Jinyu Yang, Jiali Duan, Son Tran, Liqun Chen, Yi Xu, Belinda Zeng, Trishul Chilimbi</div>
+            <div class="puba">Jinyu Yang, <span class="pubme">Jiali Duan</span>, Son Tran, Liqun Chen, Yi Xu, Belinda Zeng, Trishul Chilimbi</div>
             <div class="pubv">Under Review, 2021</div>
             <div class="publ">
               <ul>
@@ -485,7 +456,7 @@
                   context of object detection and metric learning. 
                   </div>
     
-                <div class="puba">Jiali Duan, C.-C. Jay Kuo</div>
+                <div class="puba"><span class="pubme">Jiali Duan</span>, C.-C. Jay Kuo</div>
                 <div class="pubv">APSIPA, 2021</div>
                 <div class="publ">
                   <ul>
@@ -521,7 +492,7 @@
                   measure the pairwise similarity and are used to select high-confident samples for training the student network. We evaluate our method on standard retrieval
                   benchmarks: CUB-200, Cars-196 and In-shop. Experimental results demonstrate that our approach significantly improves the performance over the state-of-the-art methods.</div>
 
-              <div class="puba">Jiali Duan, Yen-Liang Lin, Son Tran, Larry Davis and C.-C. Jay Kuo</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Yen-Liang Lin, Son Tran, Larry Davis and C.-C. Jay Kuo</div>
               <div class="pubv">CVPR 2021</div>
               <div class="publ">
                 <ul>
@@ -565,7 +536,7 @@
                   explainability and guidance for curriculum reinforcement learning. We first identify the ``inertial'' problem in automatic curriculum
                   and then propose a simple interactive curriculum framework that works in environments that require millions of interactions.</div>
 
-              <div class="puba">Jiali Duan, Yilei Zeng, Yang Li, Emilio Ferrara, Lerrel Pinto, C.-C. Jay Kuo, Stefanos Nikolaidis</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Yilei Zeng, Yang Li, Emilio Ferrara, Lerrel Pinto, C.-C. Jay Kuo, Stefanos Nikolaidis</div>
               <div class="pubv">Preprint</div>
               <div class="publ">
                 <ul>
@@ -606,7 +577,7 @@
                   ttention module to model the interactions between users’ preferences and contextual information. Experiments on real world dataset reveals that MAEG not only outperforms
                   the state-of-the-art methods, but also provides interpretable insights by highlighting the role of semantic attributes and contextual relationships among items.</div>
 
-              <div class="puba">Jiali Duan, Xiaoyuan Guo, Son Tran and C.-C. Jay Kuo</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Xiaoyuan Guo, Son Tran and C.-C. Jay Kuo</div>
                 <div class="pubv">SCMLS 2020</a></div>
               <div class="publ">
                 <ul>
@@ -648,7 +619,7 @@
                   gradient flow. Quantitative and qualitative experiments show the effectiveness of our framework in performing flexible and multi-modality
                   portrait manipulation with photo-realistic effects. </div>
 
-              <div class="puba">Jiali Duan, Xiaoyuan Guo, and C.C-Jay Kuo</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Xiaoyuan Guo, and C.C-Jay Kuo</div>
               <div class="pubv">APSIPA 2020</div>
               <div class="publ">
                 <ul>
@@ -694,7 +665,7 @@
   human adversary as compared to training in a self-supervised
   manner.  </div>
 
-              <div class="puba">Jiali Duan, Qian Wang, Lerrel Pinto, C.-C. Jay Kuo, and Stefanos Nikolaidis</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Qian Wang, Lerrel Pinto, C.-C. Jay Kuo, and Stefanos Nikolaidis</div>
                 <div class="pubv">IROS 2019 (Best Paper Finalist), <a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">USC Media</a></div>
               <div class="publ">
                 <ul>
@@ -729,7 +700,7 @@
               robust grasping behavior. We compared human adversary with simulated adversary and grasping policy learned in a self-supervised manner. Both quantitative and subjective user studies verify
               the effectiveness of human domain knowledge involved. We're the first work to study the effect of human-adversary in robotic learning.</div>
 
-              <div class="puba">Jiali Duan, Qian Wang, Lerrel Pinto, C.-C. Jay Kuo, and Stefanos Nikolaidis</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Qian Wang, Lerrel Pinto, C.-C. Jay Kuo, and Stefanos Nikolaidis</div>
               <div class="pubv">SCR 2019 (Spotlight)</div>
               <div class="publ">
                 <ul>
@@ -766,7 +737,7 @@
   (FC) layers, we construct them using a cascade of multi-stage linear least squared regressors (LSRs). The classification and robustness (against adversarial attacks) performances of BP- and FF-designed CNNs applied to the
   MNIST and the CIFAR-10 datasets are compared. Finally, we comment on the relationship between BP and FF designs.</div>
 
-              <div class="puba">C.-C. Jay Kuo, Min Zhang, Siyang Li, Jiali Duan and Yueru Chen</div>
+              <div class="puba">C.-C. Jay Kuo, Min Zhang, Siyang Li, <span class="pubme">Jiali Duan</span> and Yueru Chen</div>
               <div class="pubv">JVCI 2019 (Best Paper Award of JVCI 2021)</div>
               <div class="publ">
                 <ul>
@@ -798,7 +769,7 @@
               <div class="pubd">Modern image generative models, such as Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs),
   are trained by backpropagation (BP). The training process is complex and the underlying mechanism is difficult to explain.
                   We propose an interpretable generative model for handwritten digits synthesis is proposed in this work.</div>
-              <div class="puba">Yao Zhu, Saksham Suri, Pranav Kulkarni, Yueru Chen, Jiali Duan and C.-C. Jay Kuo</div>
+              <div class="puba">Yao Zhu, Saksham Suri, Pranav Kulkarni, Yueru Chen, <span class="pubme">Jiali Duan</span> and C.-C. Jay Kuo</div>
               <div class="pubv">ICIP 2019</div>
               <div class="publ">
                 <ul>
@@ -837,7 +808,7 @@
   ance when confronted with comprehensive inter-class variations. In addition, a 3D depth-saliency con-
   volutional network is aggregated in parallel to capture subtle motion characteristics.</div>
 
-              <div class="puba">Jiali Duan, Jun Wan, Shuai Zhou, Xiaoyuan Guo, and Stan Z. Li</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Jun Wan, Shuai Zhou, Xiaoyuan Guo, and Stan Z. Li</div>
               <div class="pubv">ACM-TOMM 2017 (Accepted) </div>
               <div class="publ">
                 <ul>
@@ -874,7 +845,7 @@
   margin (10.29%) while also achieving the best result on
   RGBD-HuDaAct dataset (96.74%).</div>
 
-              <div class="puba">Jiali Duan, Shuai Zhou, Jun Wan, Xiaoyuan Guo, and Stan Z. Li</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Shuai Zhou, Jun Wan, Xiaoyuan Guo, and Stan Z. Li</div>
               <div class="pubv">Preprint</div>
               <div class="publ">
                 <ul>
@@ -914,7 +885,7 @@
   benchmark to help assess performance of face classification only, and ease
   the participation of other related researchers.</div>
 
-              <div class="puba">Jiali Duan, Shengcai Liao, Shuai Zhou, and Stan Z. Li</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Shengcai Liao, Shuai Zhou, and Stan Z. Li</div>
               <div class="pubv">CCBR 2016 (Best Student Paper) </div>
               <div class="publ">
                 <ul>
@@ -959,7 +930,7 @@
   region competition helps alleviate false alarms while enhancing localiza-
   tion accuracy.	</div>
 
-              <div class="puba">Jiali Duan, Shengcai Liao, Xiaoyuan Guo, and Stan Z. Li</div>
+              <div class="puba"><span class="pubme">Jiali Duan</span>, Shengcai Liao, Xiaoyuan Guo, and Stan Z. Li</div>
               <div class="pubv">ACCV Workshop 2016 (Oral)</div>
               <div class="publ">
                 <ul>
@@ -1248,9 +1219,9 @@
 
 <!-- <hr> -->
 <section class="section-6" id="section-6">
-  <div class="section-6-text">
+  <!-- <div class="section-6-text">
       <h2 class="section-6-heading"></h2>
-  </div>
+  </div> -->
   <p class="copyright">jli.duan@gmail.com &copy; Last updated December 2021</p>
 </section>
 

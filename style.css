@@ -20,7 +20,7 @@ html, body {
 }
 #header {
   width: 100%;
-  height: 400px;
+  height: 55%;
   font-weight: 300;
   color: white;
   position: absolute;
@@ -128,8 +128,10 @@ li {
   display: inline-block;
 }
 #timeline {
+  margin: auto;
   font-size: 20px;
   font-weight: 300;
+  padding: 2rem 0;
 }
 @media (min-width: 768px) {
   .timelineitem:nth-child(odd) {
@@ -266,6 +268,10 @@ hr.soft {
 }
 .puba {
   font-size: 18px;
+  color: #000;
+}
+.pubme{
+  font-weight: 400;
   color: #900;
 }
 .pubv {
@@ -412,7 +418,10 @@ hr.soft {
 .banner {
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
   text-align:center;
 }
 
@@ -467,21 +476,6 @@ hr.soft {
   padding-top: 60px;
 }
 
-
-/* .banner a span::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: '';
-  width: 16px;
-  height: 16px;
-  margin: -12px 0 0 -8px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-} */
 
 /* Navbar */
 
@@ -573,25 +567,27 @@ a:hover, a:visited, a:link, a:active
   align-items: center;
 }
 
-/* About */
+/* About timeline*/
 .section-2 {
   width: 100%;
   height: 100%;
-  padding: 10rem 0 10rem 0;
+  padding: 2rem 0;
   background-color: #eef;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 /* Recent News */
 .section-3 {
   width: 100%;
-  height: 100%;
-  padding: 5rem 0 10rem 0;
+  height: 130vh;
+  padding: 3rem 0 0rem 0;
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -621,7 +617,7 @@ a:hover, a:visited, a:link, a:active
   width: 100%;
   height: 10vh;
   background-color: #222;
-  padding: 0rem 0;
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -643,7 +639,7 @@ a:hover, a:visited, a:link, a:active
 
 .copyright {
   position: absolute;
-  bottom: 3rem;
+  bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 200;
   color: #eee;
@@ -656,14 +652,17 @@ a:hover, a:visited, a:link, a:active
 
 /* end of footer */
 
+.photo-projects {
+  width: 100%; 
+}
 /* projects */
 .projects {
   width: 100%; 
-  margin-top: 10rem; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 3rem 0 0rem 0;
+  margin-top: 30%;
 }
 
 .section-header {
@@ -686,21 +685,23 @@ a:hover, a:visited, a:link, a:active
 .underline {
   width: 12rem;
   height: 0.3rem;
+  margin-top: -2rem;
+  margin-bottom: 0rem;
   background-color: #c29525;
 }
 
 .cards-wrapper {
   display: flex;
-  justify-content: space-around;
-  margin-top: 5rem;
-  width: 80%;
+  justify-content: space-evenly;
+  width: 90%;
 }
 
 .card {
   width: 30rem;
-  height: 20rem;
+  height: 15rem;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
+  margin-right: 1rem;
   position: relative;
 }
 
@@ -727,7 +728,7 @@ a:hover, a:visited, a:link, a:active
 .card-info {
   position: absolute;
   bottom: 0;
-  padding: 2rem;
+  padding: 5rem 3rem 1rem;
   text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
@@ -751,7 +752,7 @@ a:hover, a:visited, a:link, a:active
 .card-info h3 {
   font-family: "Muli", serif;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 1000;
   color: #a52a2a;
   margin-bottom: 1rem;
 }
@@ -763,7 +764,7 @@ a:hover, a:visited, a:link, a:active
   font-weight: 300;
   color: #fff;
   width: 80%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .card-info button {
@@ -814,7 +815,7 @@ a:hover, a:visited, a:link, a:active
   position: relative;
 }
 
-.menu-link::before {
+/* .menu-link::before {
   content: attr(data-content);
   position: absolute;
   top: 0;
@@ -824,11 +825,11 @@ a:hover, a:visited, a:link, a:active
   overflow: hidden;
   white-space: nowrap;
   transition: width 0.3s ease-in-out;
-}
+} */
 
-.menu-link:hover::before {
+/* .menu-link:hover::before {
   width: 100%;
-}
+} */
 
 .social-media {
   position: absolute;
@@ -988,7 +989,7 @@ a:hover, a:visited, a:link, a:active
 }
 
 .circles div {
-  animation: circles 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: circles 1.0s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 4rem 4rem;
 }
 
