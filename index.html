@@ -178,7 +178,7 @@
     <div id="timeline">
       <div class="timelineitem">
         <div class="tdate">2022.06 - Now</div>
-        <div class="ttitle">Research Scientist @ FAIR</div>
+        <div class="ttitle">Research Scientist @ FAIR Labs</div>
         <div class="tdesc">Meta AI</div>
         <div class="tdesc">Menlo Park, Bay Area</div>
       </div>
@@ -235,7 +235,7 @@
     <div class="row">
       <h3>Personal Introduction</h3>
     </div>
-        <p>I'm a Research Scientist at FAIR Labs in Meta AI. My major interests are 3D vision, vision-language representation learning, object detection and robotics. I obtained my PhD at University of Southern California supervised by Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>. 
+        <p>I'm a Research Scientist at FAIR Labs in Meta AI. My major interests are 3D vision (contributor of Pytorch3d), vision-language representation learning, object detection and robotics. I obtained my PhD at University of Southern California supervised by Prof. <a href="http://mcl.usc.edu/people/cckuo/">C.-C. Jay Kuo</a>. 
         I got my Master degree (Presidential Scholarship) under Prof. <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a>,
         <a href="http://www.cbsr.ia.ac.cn/users/scliao/">Shengcai Liao</a> and <a href="http://www.cbsr.ia.ac.cn/users/jwan/">Jun Wan</a>
         at Chinese Academy of Sciences. I have interned at <a href="https://www.sensetime.com/">SenseTime</a> with <a href="https://shijianping.me/">Jianping Shi</a> and <a href="https://www.a9.com/">Amazon Visual Search</a> with Son Tran.
@@ -337,6 +337,40 @@
     <h2>Selected Publications</h2>
     <div id="pubs">
 
+      <!--Neurips 22 Paper-->
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+  
+        <br>
+              <img src="papers/nips22/neurips-22-front.png" style="height:500; width:auto;">
+        <br><br>
+            </div>
+          </div>  <!--col-md-6-->
+  
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt"><b>Why do We Need Large Batchsizes in Contrastive Learning? A Gradient-Bias Perspective</b></div>
+              <div class="pubd">Contrastive learning (CL) has been the de facto technique for self-supervised representation learning (SSL), with impressive empirical success such as multi-modal representation learning. 
+                However, traditional CL loss only considers negative samples from a minibatch, which could cause biased gradients due to the non-decomposibility of the loss. For the first time, we consider optimizing a 
+                more generalized contrastive loss, where each data sample is associated with an infinite number of negative samples. We show that directly using minibatch stochastic optimization could lead to gradient bias. 
+                To remedy this, we propose an efficient Bayesian data augmentation technique to augment the contrastive loss into a decomposable one, where standard stochastic optimization can be directly applied without gradient bias. 
+                Specifically, our augmented loss defines a joint distribution over the model parameters and the augmented parameters, which can be conveniently optimized by a proposed stochastic expectation-maximization algorithm. 
+                </div>
+  
+              <div class="puba"> Changyou Chen, Jianyi Zhang, Yi Xu, Liqun Chen, <span class="pubme">Jiali Duan</span>, Yiran Chen, Son Tran, Belinda Zeng, Trishul Chilimbi</div>
+              <div class="pubv">NeurIPS, 2022</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://www.amazon.science/publications/why-do-we-need-large-batch-sizes-in-contrastive-learning-a-gradient-bias-perspective">PDF</a></li>
+                </ul>
+              </div>
+  
+            </div>  <!--pub-->
+      </div>  <!--col-md-6-->
+      </div> <!--row-->
+    </div> <!--pubwrap-->
 
       <!--CVPR 22 Paper-->
       <div class="pubwrap">
