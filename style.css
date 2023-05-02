@@ -560,7 +560,8 @@ a:hover, a:visited, a:link, a:active
 /* Home */
 .section-1 {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 50vh;
   padding: 0rem 0 0rem 0;
   background-color: #fff;
   display: flex;
@@ -572,7 +573,7 @@ a:hover, a:visited, a:link, a:active
 .section-2 {
   width: 100%;
   height: 100%;
-  padding: 2rem 0;
+  padding: 3rem 0;
   background-color: #eef;
   display: flex;
   flex-direction: column;
