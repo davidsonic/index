@@ -6,7 +6,7 @@
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Face Classification: A Specialized Benchmark Study</title>
+  <title>Robotic Learning In Simulation</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -22,12 +22,16 @@
   function page_loaded() {
   }
   </script>
+
+  <script type="text/javascript"
+  src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+  </script>
 </head>
 
 <body onload="page_loaded()">
 
 <div id="header">
-   <h1>Face Classification: A Specialized Benchmark Study</h1>
+   <h1>Robotic Learning In Simulation</h1>
 </div>
 
 <!--
@@ -40,231 +44,183 @@
   <h2>Abstract</h2>
 
   <div id="coursedesc">
-<p>Face detection evaluation generally involves three steps: block
-generation, face classification, and post-processing (<a href="ccbr/face-benchmark.pdf">Motivation</a>). However, firstly, face
-detection performance is largely influenced by block generation and post-
-processing, concealing the performance of face classification core mod-
-ule. Secondly, implementing and optimizing all the three steps results
-in a very heavy work, which is a big barrier for researchers who only
-cares about classification. Motivated by this, we conduct a specialized
-benchmark study in this paper, which focuses purely on face classifica-
-tion. We start with face proposals, and build a benchmark dataset with
-about 3.5 million patches for two-class face/non-face classification. Re-
-sults with several baseline algorithms show that, without the help of
-post-processing, the performance of face classification itself is still not
-very satisfactory, even with a powerful CNN method. </p>
+<p>I was involved in a series of interesting robotic projects with Prof. <a href="https://stefanosnikolaidis.net/">Stefanos Nikolaidis</a> during my PhD. In this page, 
+   I will show two of them which concern training agents in simulation. The first project aims to learn robust robotic manipulation in the mujoco environment. The key idea is to 
+  incorporate the generator-discriminator concept from generative adverarial network (GAN) into robotics training. In this analogy, the robot policy which predicts the "action"
+is the generator, whereas human who performs perturbations to judge the quality of the robot action can be seen as the discriminator. In 2019, this idea of leveraging "adversarial" human
+is quite new in the domain of human-robot interaction (HRI), and we're the first to prove empirically that this setting actually helps improve the robustness of robotic grasping, in contrast to many
+pre-existing human-assisted frameworks. Because of this, I'm fortunate to have received the <a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">Best Paper Finalist</a> in IROS that year.
+</p>
 
-<p>The data and evaluation code of this study will be released to the public
-to help assess performance of face classification, and ease the participation of
-related researchers who want to try their algorithms for face detection. With this
-benchmark, researchers only need to do feature extraction and face classification
-per image patch, regardless the troubling block generation and post-processing
-tasks. Even more easily, we provide some baseline features, so that general clas-
-sification researchers are able to evaluate their classification algorithms.</p>
+<p>The second project can be seen as an extension of the first one, which also leverages human feedback as an objective to train the robot policy. The difference is that this project leverages human feedback as curriculum in the setting of reinforcement learning. 
+  Imagine a RL agent solving a new task of navigation. In the beginning, the agent is barely moveable, unable to understand the goal or make any progress (this is particularly severe when the reward is sparse)! However, human has prior knowledge over the difficulty of 
+  the task, and can thus make changes to facilitate the learning (by simplifying the environment or moving the agent closer to the goal for example). Compared to prior works such as GoalGAN that trains two agents to achieve similar effects, our argument is that humans
+  can be more efficient in getting the agent policy converged. Aside from this intuition, another main contribution of this project is to enable human-in-the-loop reinforcement learning, which requires quite a bit engineering. I ended-up building on UnityML in the end, as the framework
+  is more flexible than mujoco with its "client-server" infrastructure and its C# interface that makes human interactions much easier!
+  
+</p>
   </div>
 </div>
 </div>
 
 <div class="container sec">
 
-<div id="paper">
-<a href="ccbr/ccbr2016.pdf">
-  
-    <ul>
-      <li><img src="ccbr/1.jpg" width="5%"></li>
-      <li><img src="ccbr/2.jpg" width="5%"></li>
-      <li><img src="ccbr/3.jpg" width="5%"></li>
-      <li><img src="ccbr/4.jpg" width="5%"></li>
-      <li><img src="ccbr/5.jpg" width="5%"></li>
-      <li><img src="ccbr/6.jpg" width="5%"></li>
-      <li><img src="ccbr/7.jpg" width="5%"></li>
-      <li><img src="ccbr/8.jpg" width="5%"></li>
-    </ul>
-
-</a>
+<div class="diagram">
+  <div>
+    <img src="../imgs/robotic-learning.gif" />
+    <div class="ppd">Robotic learning with adversarial human, where robotic policy is the analogy of generator and human perturbations as the discriminator.</div> 
+  </div>
+  <div>
+    <img src="../imgs/interactive-demo-out.gif" />
+    <div class="ppd">Human prior as curriculum for RL agent training.</div> 
+  </div>
 </div>
 
 <br><br>
-<div>
-  <div class="instructor">
-    <a href="https://davidsonic.github.io/index/">
-    <div class="instructorphoto"><img src="djl2.jpg" style="height:120px;width=100px;"></div>
-    <div>Jiali Duan</div>
-    </a>
-  </div>
-  <div class="instructor">
-    <a href="http://www.cbsr.ia.ac.cn/users/scliao/index.html">
-    <div class="instructorphoto"><img src="scliao.jpg" style="height:120px;width=100px;"></div>
-    <div>Shengcai Liao</div>
-    </a>
-  </div>
-  <div class="instructor">
-    <a href="http://www.cbsr.ia.ac.cn/users/szli/">
-    <div class="instructorphoto"><img src="stanzli.jpg" style="height:120px;width=100px;"></div>
-    <div>Stan Z.Li</div>
-    </a>
-  </div>
-</div>
-
-Jiali Duan is currently a master student at Univeristy of Chinese Academy of Sciences
-<div style="color:#900;">
-   Appear in CCBR 2016 (Best Student Paper)
 </div>
 
 </div>
 
 <div class="sechighlight">
 <div class="container sec" style="font-size:18px">
-  <div class="row">
-
-    <div class="col-md-5">
-      <h2>Code and Extras</h2>
-      Find additional resources on  <a href="https://github.com/davidsonic/face_classification_ccbr2016">Github</a>, including:
+  <h2 style="text-align: center;">Formulation</h2>
+  <p style="text-align: center;">The optimization objective is to obtain the optimial robot policy which, given state as input (in this project image), predicts a grasping action that maximizes the reward. The reward 
+  is a heuristic that combines the observation reward (i.e., whether grasping succeeds) and the human reward (i.e., whether the grasping is robust). The robustness of the grasping is evaluated based on if the grasping can
+withstand human perturbations. </p>
+    <div class="center-row">
       <ul>
-        <li>Face classification benchmark</li>
-        <li>Pretrained model</li>
-        <li>Proposal extraction code</li>
-        <li>Evaluation code</li>
+        <li>Robot Policy: $\pi^R: s \rightarrow a^R$</li>
+        <li>Human Policy: $\pi^H: s^+ \rightarrow a^H$</li>
+        <li>Reward: $r = R^R(s, a^R, s^+) - \alpha R^H(s^+, a^H, s^{++})$</li>
+        <li>Optimization objective: $\pi_{*}^R = argmax_{\pi^R} E[r(s, a^R, a^H | \pi^H)]$</li>
       </ul>
     </div>
-    <div class="col-md-7">
-      <h2>Bibtex</h2>
-<pre style="font-size:12px;">
-@inproceedings{face_classification,
-  title={Face Classification: A Specialized Benchmark Study},
-  author={Jiali Duan, Shengcai Liao, Shuai Zhou, and Stan Z. Li},
-  conference={ccbr},
-  year={2016}
-}
-</pre>
-    </div>
-
-  </div>
 </div>
 </div>
 
 <div class="container sec">
-  <h2>Performance of RPN network</h2>
- <p> RPN network is employed to extract proposals inspired by the work of Faster
-R-CNN and its recent application in face detection. Note that generic
-object proposal-generating methods are not very suitable for our
-classification benchmark because the amount of positive face patches generated
-is too scarce and those patches are not as discriminative as a specially trained
-RPN face proposal network.</p>
-<p>We trained a 4-anchor RPN network with some slight modifications on the fc6
-and fc7 InnerProduct layer of Zeiler and Fergus model. The default anchor
-ratio was set to 1:1 and we compute anchors at 4 different scales (2,8,16,32). Dur-
-ing training, the number of categories are modified to 2 (face and background)
-with 2*4 bounding box coordinates to be predicted. Softmax and smoothL1 loss
-are deployed for training classification and bounding box prediction respectively.
+  <h2>Framework Overview</h2>
+  <p>The above fomulation can be more vividly illustrated in the below diagram. Given a visual image as input, 
+    the robot policy network predicts a robot action $a^R$. The robot executes the action, landing in a subsequent state
+    $s^+$. The human observes the new state and thinks about an adversarial action $a^H$ that will minimize the robot's reward. 
+    In other word, the human checks the robustness of the robotic action by performing a perturbation to maximize the human's adversarial reward. 
+    Finally, the resulting state $s^{++}$ is landed. 
+  </p>
+  <img class="center-img" src="../imgs/robot-learning-framework.png" />
+ <p> The robot policy is implemented as a neural network that takes an RGB image as state. This is much challenging than cases where 
+   low-dimensional states were used as in prior mujoco settings. Therefore, a pre-training step is needed to initialize the robotic policy [Supersizing self-supervision: Learning to
+   grasp from 50k tries and 700 robot hours]. Another thing worth noting here is that the human policy is not updated (we train voluntary users before the experiments), so we didn't observe
+   the instability of generator training as reported in GAN papers. 
+ </p>
+
+ <h2>Benefits of Human Adversary</h2>
+  <p>Why you may wonder, that a human adversary is needed? In fact, we ask ourselves the same question when we set out to design the architecture.
+    It's possible to train a simulated agent whose goal is to minimize the robot agent's reward. In this setting, the framework reduces to 
+    a more typical generator-discriminator zero-sum game. Our main argument is that human has prior knowledge over the robustness of agent manipulations, 
+    as different objects usually require different ways to manipulate (See the below figure as an example). We also argue that human is better than a simulated
+    agent in understanding how to perform the pertubations. 
+  </p>
+  <div>
+    <img class="center-img" src="../imgs/object-priors.png" />
+    <div class="center-row">Human has priors over object shapes and robustness.</div> 
+  </div>
+  
+<br>
+<h2>Evaluation Metrics</h2>
+<p>Robustness is a pretty subjective measure, so we defined two hypothesis that we want to validate in this project.
 </p>
-<p>  The performance of RPN is evaluated on AFW database, through ROC curve. </p>
-  <br>
-  <br><br>
-   <div style="width:100%; margin-left: auto; margin-right:auto; text-align:center;">
-			<img src="ccbr/ccbr_big.PNG" width="40%" >
-			<img src="ccbr/ccbr_small.PNG" width="40%" >
-   </div>
+<ul>
+  <li>Robot trained with the human
+    adversary will perform better than the robot trained in a
+    self-supervised manner.</li>
+  <li>Human
+    adversary will be better than a
+    simulated adversary.</li>
+</ul>
+
+ <p>We then compared the success rates and robustness rates based on different training strategies, different users and different objects, with or
+  or without perturbations. As robutsness is rather a subjective metric, we also conducted a qualitative study where
+  each participant's responses is analyzed. We observed that the robot's success rates improved after training, and leading to better robustness.</p>
+  <div class="diagram">
+    <div>
+      <video controls>
+        <source src="../imgs/before.mp4" type="video/mp4" >
+      </video>
+      <div class="ppd">Before human-adversarial training. </div> 
+    </div>
+    <div>
+      <video controls>
+        <source src="../imgs/after.mp4" type="video/mp4" >
+      </video>
+      <div class="ppd">After human-adversarial training.</div> 
+    </div>
+  </div>
+
 <br>
- <h2>Face Classification Benchmark</h2>
-  <p>All the proposals are generated from the training set of WIDER FACE
-containing 12,880 high-resolution images through this RPN convolutional neural
-network. There are about 300 proposals extracted from each image. WIDER
-FACE contains 393,703 labelled faces collected from 32,203 images with a wide
-variety in scales, poses, occlusions and expressions. As shown in Table 1, proposals are extracted from the first 6,440 images in
-WIDER FACE are used as the training set, while the remaining proposals from
-the next 6,440 images are used as testing set. In the testing set the size of Non-
-face patches are about 20 times the size of face proposals.</p>
+<h2>Evolvement Over Training</h2>
+<p>The below plot shows two types of information. Red dots indicate successful human perturbations. Green dots show successful robot manipulations. For different objects (i.e., bottle, Stick) there exists differnt robust grasping strategies, and different 
+  pertubation strategies. For example, we allow users to apply 6 different directional forces (e..g, Out, In, Down, Up, Right, Left) to maximize robot failures. We observe that over the course of training, 
+  robots gradually learn to counter the disturbances from human and the success rate improves. 
+</p>
+<img class="center-img" src="../imgs/adv-action-over-time.png" style="width: 80%;"/>
+<p><b>Adversarial Action Over Time:</b> We observed that human tends to stick to a certain perturbation over the course and that human adversary
+tends to succeed at the beginning. </p>
+
+<p><b>Robot Success Rate Over Time:</b> During training, robot success rate improves and gradully withstands human perturbations.</p>
+<p><b>Human Adversary vs Simulated Adversary:</b>In our <a href="https://arxiv.org/pdf/1903.00636.pdf">paper</a>, we also compared how human adversary differs from simulated adversary and how robot evolves under two settings. The conclusion is that robot 
+  policy tends to converge faster with human adversary. 
+</p>
+
 <br>
-<div style="width:100%; margin-left:30%;">
-<img src="ccbr/table1.jpg" style="width:40%">
+<h2>Extension to Human Curriculum</h2>
+<p>As mentioned in the first paragraph, there's a connection between human-adversary as discriminator and human feedback as curriculum. In fact, the formulation defined earlier
+  can also be extended in the RL setting.
+</p>
+<div class="sechighlight">
+  <div class="container sec" style="font-size:18px">
+    <h2 style="text-align: center;">Formulation Extension</h2>
+    <p style="text-align: center;">The main difference here is that states and actions are now functions of time and that the objective is also to maximize the accumulated reward over time. 
+      In other words, the preivous project is a one-step RL as the whole action is calculated with inverse-kinematics, whereas here a trajectory is a series of actions. </p>
+    
+      <div class="center-row">
+        <ul>
+          <li>Policy Network: $\pi^{\theta}: s_t \rightarrow a_t$</li>
+          <li>Reward: $r = R_t(s_t, a_t) $</li>
+          <li>Policy Gradient: $\nabla_\theta J(\pi_\theta) = E_t[R_t \nabla_\theta log \pi_\theta(a|t|s_t)]$</li>
+        </ul>
+      </div>
+      
+  </div>
+</div>
+
+<div>
+  <img class="center-img" src="../imgs/RL-curriculum.png" />
+  <div class="center-row">Human interaction as curriculum for RL training. The difficulty of the environment evolves from easy to hard over time.</div> 
 </div>
 <br>
-<p>In our benchmark dataset, when the Intersection over Union (IOU) between
-a face proposal generated by RPN and a ground-truth label is greater than 0.5,
-we treat it as a face patch. Otherwise, when the IOU is below 0.3, we treat it as a
-non-face patch. As a result, we collected a face classification benchmark (FCB)
-database, which contains 3,558,142 proposals in total, of which 198,616 being
-face patches. All images are resized to 24x24 for face classification benchmark.
-Note that by doing so there may be some changes to the original aspect ratio.</p>
-
- <p>Below are some sample patches of the proposed face classification benchmark.</p>
-  <br><br>
-  <div style="width:100%; margin-left:20%;">
-    <img src="ccbr/sample_patch.jpg" style="height:60%; width:60%;">
+<div class="diagram">
+  <div>
+    <img src="../imgs/tutorial-interact-online-video-c.gif" />
+    <div class="ppd">Human-interactable platform for Curriculum RL training.</div> 
   </div>
+</div>
 
-<br><br>
-<h2>Evaluation and Results</h2>
-<p><b>Traditional Methods:</b> Illumination changes, occlusions and pose variation-
-s are three fundamental problems for face detection under unconstrained set-
-tings. Illumination-invariance is obtained in LOMO by applying the Retinex
-transform and the Scale Invariant Local Ternary Pattern (SILTP) for feature
-representation. NPD gives the nice properties of scale-invariance, bounded-
-ness and its feature involves only two pixel values, hence robust to occlusion
-and blur or low image resolution. We use the open source code of these two
-feature representation methods in our experiments. Besides, LBP together
-with its variant MB-LBP are also re-implemented for evaluation. We adopt
-DQT+boosting as our baseline classifier. We also tried SVM, but it appears
-to be not effective to handle this challenging problem, and it is also not efficient
-for our large-scale data. Therefore, we leaved SVM out finally.</p>
-
-<p><b>CNN Methods:</b> Convolutional Neural Network based methods have re-
-ceived more and more attention due to its effectiveness in computer vision tasks.
-In our experiments, a CIFAR-10 Net based binary classification CNN and a
-Cascade-CNN following the paradigm of have been implemented.
-Several CNN structures have been explored and we picked one with the best
-performance based on CIFAR-10 and its detailed information is listed in Table 2.
-As for the structure of Cascade-CNN. Note that for training Cascade-CNN, hard negative samples mined by the former net are used as non-
-face samples to be used for the following net training and in training each net,
-hard positive samples mined are aggregated to face proposals for further fine-
-tuning.</p>
-
-<br>
-  <div style="width:100%; margin-left:30%;">
-    <img src="ccbr/CNN_structure.jpg" style="height:40%; width:40%;">
-  </div>
-<br><br>
-<p>Traditional methods as well as CNN methods mentioned above have been tested
-on our benchmark, below shows the evaluation ROC figure, model details and speed of corresponding
-algorithms. </p>
-<br>
-  <div style="width:100%; margin-left:20%;">
-    <img src="ccbr/ROC_fig.jpg" style="height:60%; width:60%;">
-  </div>
-  <br><br>
-  <div style="width:100%; margin-left:20%;">
-    <img src="ccbr/model_details.jpg" style="height:60%; width:60%;">
-  </div>
-<br><br>
 <h2>Conclusions</h2>
-<p>Face detection generally involves three steps with face classification being its
-core module. However, it is not easy to determine the actual performance of the
-face classification part due to the large influence of block generation and post-
-processing in traditional benchmarks. Motivated by this, we conduct a special-
-ized benchmark study in this paper, which focuses purely on face classification.
-We start with face proposals by collecting about 3.5 millions of face and non-face
-sample patches, and build a benchmark dataset (FCB) for two-class face classi-
-fication evaluation. Our results show that, without the help of post-processing,
-the performance of face classification itself is still not very satisfactory, even with
-a powerful CNN method. The data and evaluation code of this study will be re-
-leased to the public to help assess performance of face classification, and ease
-the participation of other related researchers who want to try their algorithms
-for face detection.</p>
+<p>In this two projects, the potential of leveraging human interactions for robotic learning in simulation is demonstrated. More engineering details regarding the two projects will be updated next time.</p>
 </div>
 <div class="sechighlight">
-<div id="footer">
-This work was supported by the National Key Research and Development Plan
-(Grant No.2016YFC0801002), the Chinese National Natural Science Founda-
-tion Projects #61473291, #61572501, #61502491, #61572536, NVIDIA GPU
-donation program and AuthenMetric R&D Funds.
+<div id="reference">
+<ol>
+  <li>Robot Learning via Human Adversarial Games</li>
+  <li>Human Decision Makings on Curriculum
+    Reinforcement Learning with Difficulty Adjustment</li>
+</ol>
 </div>
 </div>
 
 <!-- jQuery and Boostrap -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
 
 </body>
 
