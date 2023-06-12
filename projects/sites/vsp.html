@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision Language Pretraining</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="../../css/ccbr_2016.css" />
+
+  <script>
+  function page_loaded() {
+  }
+  </script>
+
+  <script type="text/javascript"
+  src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+<div id="header">
+   <h1>Vision Language Pretraining</h1>
+</div>
+
+<!--
+<div id="teaser">
+</div>
+-->
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+
+  <div id="coursedesc">
+<p>Vision Language Pretraining (VLP) holds similar promise as language models such that when pretrained, will perform 
+  strongly over a variety of downstream multi-modal tasks, such as cross-modal retrieval, visual reasoning, VQA and text-to-image 
+  generation. The below two demos showcase two of these capabilities. On the left, the VLP model shows strong ability in correlating 
+  the image and text modalities even though it's not trained on the retrieval databases directly. On the right, a text-to-image model 
+  is built using the alignment between the image and text embedders, similar to the idea in DALLE2.  
+</p>
+
+  </div>
+</div>
+</div>
+
+<div class="container sec">
+
+<div class="diagram">
+  <div>
+    <img src="../imgs/multimodal-pretrain.gif" />
+    <div class="ppd">Demo for our "Representation Codebook for Multi-Modal Alignment" (CODIS) paper</div> 
+  </div>
+  <div>
+    <img src="../imgs/dalle-react.gif" />
+    <div class="ppd">Demo for text-to-image generation enabled by multi-modal representation learning. </div> 
+  </div>
+</div>
+
+<br><br>
+</div>
+
+</div>
+
+<div class="sechighlight">
+  <div class="container sec" style="font-size:18px">
+    <h2 style="text-align: center;">Vision-Language Pretraining with Multi-modal Alignment</h2>
+    <p style="text-align: justify;">In 2021, OPENAI proposed an elegant yet effective CLIP model that connects image and text modalities by training
+      on 400M image-text pairs. The model shows strong zero-shot ability on ImageNet classification tasks without finetuning on the original 1.28M labeled
+      samples. The main idea is to optimize the image and text embedding networks so that the image and text representations corresponding to 
+      the same instance will share greater similarity. A simple code snippet showing this idea is shown below. </p>
+
+      <pre><code>
+        # predictions from the network
+        logits = (text_embeddings @ image_embeddings.T) / self.temperature
+        images_similarity = image_embeddings @ image_embeddings.T
+        texts_similarity = text_embeddings @ text_embeddings.T
+
+        # optimization targets
+        targets = F.softmax(
+            (images_similarity + texts_similarity) / 2 * self.temperature, dim=-1
+        )
+        texts_loss = cross_entropy(logits, targets)
+        images_loss = cross_entropy(logits.T, targets.T)
+        loss =  (images_loss + texts_loss) / 2.0 
+      </code></pre>
+    
+
+      <p>Since then, the community has seen a plethora of works surrounding vision-language pretraining/alignment, and a wider applications including 
+      open-vocabulary object detection (ViLD, Detic etc), cross-modal retrieval, VQA, Visual Entailment, Referring Expression Comprehension etc. Some 
+      categorizations of works include an image branch with or without region features; or multi-modaldal fusion in the early or late stages (refer to ViLT). 
+    </p>
+  </div>
+</div>
+<div class="container sec">
+  <h2>ALBEF</h2>
+  <p>Prior works that perform Vision Language Pretraining (VLP) usually require prohibited amount of data and careful
+    image-text filtering to perform well. Examples include CLIP (400M pairs) and ALIGN (1.8b pairs). The paper shows strong performance
+    using only 15M pairs. The key observation is to address the alignment issue between the image and text modality. For example, prior works that use pretrained region features (e.g., OSCAR with object-centric visual features)
+    cannot be optimized end-to-end. It's also hard to fuse the image and text information before aligning the feature represenations first. To address this, 
+    the author proposed two main contributions.
+      <ul>
+        <li>First is to incorporate image-text alignment loss into the objective that facilitates alignment before fusion, as the title suggests (align before fuse). The loss is similar to the one used in CLIP.</li>
+        <li>Second is to leverage pseudo labels (provided by the momentum copy) so that the training is more stable, similar to the idea from MoCo for unimodal self-supervised learning. </li>
+      </ul>
+  </p>
+  <img class="center-img" style="width:60%" src="../imgs/albef.png" />
+  <p>In the above diagram, the image encoder is a 12-layer transformer architecture whereas the text encoder and the multi-modal fusion encoder evenly splits a 12 layer 
+    transformer. My take for this in-symmetry is to take advantage of the pretrained weights for initializing the two modules. The cls token from the image and text embedder
+    will be used to construct the image-text contrastive loss (ITC), while the cls token from the multi-modal encoder will be used for image-text matching loss (ITM). The typical 
+    masked language modeling loss (MLM) is also incorporated for modeling. During training, there's a "momentum copy" of the image and text embeddings (separately stored in a image/text queue), which is
+    momentum updated and "distilled" into the running image/text embedders. 
+  </p>
+</div>
+
+<div class="container sec">
+  <h2>CODIS</h2>
+  <p>This is a work done during my work at Amazon. The main motivation is to model image and text alignment and interaction at both the instance and cluster level, inspired by the success  
+    of ALBEF and SwAV. The paper was published in CVPR 2022. There are two main contribution. 
+      <ul>
+        <li>First is to align different modalities at a higher
+          and more stable level using cluster representation. Specifically, we treat image and text as two “views” of the same
+          entity, and encode them into a joint vision-language coding
+          space spanned by a dictionary of cluster centers (codebook).
+          We contrast positive and negative samples via their cluster
+          assignments while simultaneously optimizing the cluster centers. </li>
+        <li>Second is to add upon the teacher-student distillation paradigm in ALBEF, with same-modality distillations (i.e., image-to-image and text-to-text contrastive losses).</li>
+      </ul>
+  </p>
+  <img class="center-img" style="width:90%" src="../imgs/codis.png" />
+  <p>Compared to prior works, we utilize both instance level assignment losses and cluster level assignment losses for multi-modal alignment. To achieve this, a learnable multi-modal codebook which 
+    represents a joint image-text embedding space is
+    optimized, to guide the image-to-cluster and text-to-cluster assignment. We also interpreted the contrastive alignment stage from a teacher-student perspective, resulting in the following four losses. 
+    <ul>
+      <li>similarity(image_teacher, text_student)</li>
+      <li>similarity(text_teacher, image_student)</li>
+      <li>similarity(image_teacher, image_student)</li>
+      <li>similarity(text_teacher, text_student)</li>
+    </ul>
+  </p>
+</div>
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <h2 style="text-align: center;">Vision-Language Pretraining with Large Language Models</h2>
+  <p style="text-align: justify;">Language models have shown great potentials when coupled with scaling. One such representative is GPT-3, whose breakthroughs
+    on performance large depend on its scale, in both model and data sizes. These large language models (a.k.a LLM) culminated in the birth of ChatGPT (GPT-3.5) in 2022, 
+  showing emergent capabilities in instruction following, context reasoning, code generation, translation and summarization. Ever since then, researchers have been working to develop
+multi-modal LLM, which eventually led to GPT4 that was released in March this year. Alongside GPT4, there's a growing trend of research that incorporates LLM into vision-language pretraining. </p>
+    
+</div>
+</div>
+
+
+<div class="container sec">
+  <h2>Frozen</h2>
+  <p>DeepMind proposes a "dynamic prefix-tuning" approach to using frozen LLM for vision-language pretraining (there is a good intro about the difference between prompt tuning and prefix tuning <a href="https://huggingface.co/docs/peft/conceptual_guides/prompting">here</a>). In contrast to prefix-tuning which inserts and trains a static soft-prompt into
+      the LLM, the prefix is dynamic and input-conditional with the use of an additional neural network. The paper also shows the model's capability in handling "interleaved" image-text inputs 
+      and few-shots in-context learning abilities. 
+  </p>
+  <img class="center-img" style="width:90%" src="../imgs/frozen-train.png" />
+  <p>Specifically, the pretrained auto-regressive LLM is parameterized with a transformer network $f_\theta(t_1, t_2, ... t_l)$ and an embedding network $t_l = g_\theta(y_l)$, that optimizes the next-token prediction objective $\sum_l log p_\theta (y_l|y_1, y_2, ...y_{l-1})$. 
+      The model learns a visual encoder $v_\phi$ and linear mapping that transforms an image into a sequence of continuous embeddings as visual prefix to LLM. In the paper, the visual prefix is of dimension $D*k$, where $D$ is the same as token embeddings, and $k$ is 
+      the number of visual prefix tokens, a hyper-parameter set to $2$. To enable interleaved tokens, the paper adopted a relative position embedding.
+  </p>
+  <h2>BLIP-2</h2>
+  <p>The main motivation is to decompose cross-modal alignment training into two stages, in contrast to Flamingo and Frozen, which directly optimizes the image-to-text generation loss. Instead, BLIP-2 adopts a representaion learning stage and 
+      a generative learning stage separately, as shown in the image below. 
+  </p>
+  <img class="center-img" src="../imgs/blip-v2.png" />
+  <p>From a pratical perspective, Q-former can be seen as a multi-modal conversion network that bridges the gap between image representation and token embeddings digested by the frozen LLM. </p>
+
+
+
+<h2>Conclusions</h2>
+<p>Vision-Language Pretraining is an emerging topic attracting growing interests from both the academia and industry. This blog has only scratched 
+  the surface of the many exciting works in this domain. Follow up will show more interesting works in the era of GPT4!
+</p>
+</div>
+<div class="sechighlight">
+<div id="reference">
+<ol>
+  <li>Learning Transferable Visual Models From Natural Language Supervision</li>
+  <li>ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision</li>
+  <li>Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks</li>
+  <li>ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision</li>
+  <li>Align before Fuse: Vision and Language Representation Learning with Momentum Distillation</li>
+  <li>Representation Codebook for Multi-Modal Alignment</li>
+  <li>Unsupervised Learning of Visual Features by Contrasting Cluster Assignments</li>
+  <li>Multimodal Few-Shot Learning with Frozen Language Models</li>
+  <li>BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models</li>
+</ol>
+</div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
