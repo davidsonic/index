@@ -36,7 +36,7 @@ html, body {
 }
 
 .bg1 {
-  background-image: url('ucas-blur.jpg');
+  background-image: url('images/grand-teton-blur-3.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
@@ -64,18 +64,18 @@ html, body {
 #htname {
   font-size: 46px;
   font-weight: 400;
-  color:black;
+  color:white;
 }
 #htdesc {
   font-size: 18px;
   font-weight: 380;
   margin-top: -6px;
-  color:black;
+  color:white;
 }
 #htem {
   font-size: 14px;
   font-weight: 380;
-  color:black;
+  color:white;
 }
 @media (max-width: 768px) {
   #headerblob {
