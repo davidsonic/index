@@ -1,17 +1,296 @@
-.news_new_code {
-  color: #009800;
-  margin-bottom: 8px; 
+/* ===============================================================
+   Kaiming-style minimal academic override.
+   Loaded after style.css, so these rules take precedence.
+   =============================================================== */
+
+/* --- Global reset to plain serif on white --- */
+html, body {
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-.news_new_paper {
-  color: #980000;
-  margin-bottom: 8px; 
+/* Drop the ornamental background image / overlays from style.css */
+.bg-container,
+.bg-header,
+.bg-img-wrapper,
+.banner,
+.spinner-container {
+  display: none !important;
 }
 
-.news_source_code {
-  color: #9bb68f;
+/* Hide the sliding sidebar, hamburger menu, top navbar */
+.sidebar,
+.hamburger-menu,
+.navbar.center,
+nav.navbar {
+  display: none !important;
 }
 
-.news_source_intern {
-  color: #b47a1f;
+/* --- Sections become plain blocks, not full-viewport panels --- */
+section,
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5,
+.section-6 {
+  position: static !important;
+  height: auto !important;
+  min-height: 0 !important;
+  width: auto !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #000 !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  max-width: 860px;
+  display: block !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+
+section + section {
+  margin-top: 28px !important;
+}
+
+/* Container -- single column, no Bootstrap fluid stretching */
+.container {
+  width: 100% !important;
+  max-width: 860px !important;
+  padding: 0 24px !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+/* --- Links: classic blue, underlined --- */
+a, a:visited {
+  color: #1a55a8 !important;
+  text-decoration: underline !important;
+  background: transparent !important;
+}
+a:hover {
+  color: #0b3a7a !important;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4 {
+  font-family: "Times New Roman", Times, serif !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  margin: 22px 0 10px 0 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+h2 { font-size: 22px; border-bottom: 1px solid #999; padding-bottom: 4px; }
+h3 { font-size: 18px; }
+
+/* --- Header block (photo + name) --- */
+.photo-projects { display: block !important; padding: 24px 0 8px 0 !important; background: none !important; }
+#header.bg1 {
+  background: none !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+#headerblob {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 24px !important;
+  padding: 0 !important;
+  background: none !important;
+  text-align: left !important;
+}
+#headerblob .imgme,
+#headerblob img.img-circle {
+  border-radius: 0 !important;        /* Kaiming uses square photo */
+  border: 1px solid #ccc !important;
+  height: 180px !important;
+  width: auto !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+#headertext { color: #000 !important; }
+#htname {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+  margin-bottom: 6px !important;
+}
+#htdesc, #htem {
+  color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  margin-bottom: 4px !important;
+}
+#htem a, .header-link {
+  color: #1a55a8 !important;
+  text-decoration: underline !important;
+}
+
+/* --- Timeline -> simple bullet-style list --- */
+#timeline {
+  display: block !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#timeline::before, #timeline::after { display: none !important; }
+.timelineitem {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px 0 !important;
+  margin: 0 0 6px 0 !important;
+  width: auto !important;
+  display: block !important;
+  position: static !important;
+}
+.timelineitem::before, .timelineitem::after { display: none !important; }
+.tdate {
+  display: inline-block !important;
+  width: 160px !important;
+  color: #555 !important;
+  font-style: italic !important;
+  vertical-align: top !important;
+}
+.ttitle {
+  display: inline !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+}
+.tdesc {
+  display: inline !important;
+  color: #333 !important;
+  margin-left: 6px !important;
+}
+.tdesc::before { content: " — "; }
+
+/* --- Tabs (CV / Projects) --- */
+.nav.nav-tabs {
+  border-bottom: 1px solid #999 !important;
+  margin-bottom: 14px !important;
+}
+.nav-tabs > li > a {
+  color: #1a55a8 !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 6px 12px !important;
+}
+.nav-tabs > li.active > a {
+  color: #000 !important;
+  border-bottom: 2px solid #000 !important;
+  font-weight: 700 !important;
+}
+.breadcrumb {
+  background: none !important;
+  padding: 0 !important;
+  margin: 6px 0 !important;
+}
+
+/* --- Project cards (if shown) --- */
+.pp { padding: 6px 0 !important; }
+.imgb {
+  width: 100% !important;
+  height: auto !important;
+  border: 1px solid #ddd;
+}
+.ppd { font-size: 15px; padding: 4px 0; }
+
+/* --- Publications: thumbnail left, text right, separated by rule --- */
+#pubs { margin-top: 8px; }
+.pubwrap {
+  border-bottom: 1px solid #ddd !important;
+  padding: 18px 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+.pubwrap:last-child { border-bottom: none !important; }
+.pubimg {
+  text-align: left !important;
+  padding: 0 !important;
+}
+.pubimg img {
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 180px !important;
+  width: auto !important;
+  margin: 0 8px 8px 0 !important;
+  border: 1px solid #ddd;
+}
+.pub { padding: 0 !important; }
+.pubt {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  font-style: italic !important;   /* Kaiming italicizes titles */
+  color: #000 !important;
+  margin-bottom: 4px !important;
+}
+.pubt b { font-style: italic; }
+.pubd {
+  color: #333 !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  margin: 6px 0 !important;
+}
+.puba { color: #000 !important; font-size: 14px !important; margin: 4px 0 !important; }
+.pubme { font-weight: 700 !important; }
+.pubv { font-weight: 700 !important; color: #000 !important; margin: 2px 0 6px 0 !important; }
+.publ ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 4px 0 !important;
+}
+.publ ul li {
+  display: inline !important;
+  margin-right: 8px !important;
+  font-size: 14px !important;
+}
+.publ ul li::after { content: " |"; color: #aaa; margin-left: 6px; }
+.publ ul li:last-child::after { content: ""; }
+
+/* --- News items --- */
+.news_new_paper, .news_new_code {
+  color: #000 !important;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* --- Activity section --- */
+.ctr {
+  margin: 14px 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  text-align: left !important;
+}
+.hht { font-size: 15px; margin-bottom: 6px; }
+
+/* --- Footer --- */
+.copyright {
+  text-align: left !important;
+  color: #666 !important;
+  font-size: 13px !important;
+  border-top: 1px solid #ccc;
+  padding: 14px 0 24px 0 !important;
+  margin-top: 32px !important;
+}
+
+/* Kill leftover decorative rules */
+hr.soft { border-color: #ddd !important; }
+
+/* Make sure Bootstrap rows lay out cleanly inside narrow container */
+.row { margin-left: 0 !important; margin-right: 0 !important; }
+
+/* Responsive: stack header on small screens */
+@media (max-width: 600px) {
+  #headerblob { flex-direction: column !important; align-items: flex-start !important; }
+  .tdate { display: block !important; width: auto !important; }
+  .ttitle, .tdesc { display: block !important; margin-left: 0 !important; }
+  .tdesc::before { content: ""; }
 }
