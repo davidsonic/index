@@ -65,6 +65,9 @@
         <a href="#section-4" class="menu-link" data-content="Publications">Publications</a>
       </li>
       <li class="menu-item">
+        <a href="#section-experience" class="menu-link" data-content="Experience">Experience</a>
+      </li>
+      <li class="menu-item">
         <a href="https://davidsonic.github.io/academic_blog/" class="menu-link" data-content="Blogs">Blogs</a>
       </li><br>
       <li class="menu-item">
@@ -92,6 +95,7 @@
     <a href="#section-1" class="navbar-link">Home</a>
     <a href="#section-3" class="navbar-link">Writings</a>
     <a href="#section-4" class="navbar-link">Publication</a>
+    <a href="#section-experience" class="navbar-link">Experience</a>
     <a href="#section-5" class="navbar-link">Awards</a>
     <a href="#section-7" class="navbar-link">Service</a>
     <a href="#section-6" class="navbar-link">Contact</a>
@@ -203,17 +207,112 @@
 
 
 
+<section class="section-5" id="section-experience" style="background-color:#eef;">
+  <style>
+    .exp-bullets { list-style: none; padding-left: 0 !important; }
+    .exp-bullets > li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .exp-bullets > li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: #444;
+    }
+  </style>
+  <div class="container">
+    <h2>Experience</h2>
+    <ul class="exp-list" style="list-style:none; padding:0; max-width:960px; margin:0 auto;">
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; border-bottom:1px solid #ddd; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/apple.svg" alt="Apple" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">Senior Research Scientist &middot; <a href="https://www.apple.com/">Apple</a> <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 12/2023 &ndash; Present</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">Foundational Diffusion Models &middot; Cupertino, CA</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>Lead large-scale pre/post-training of <b>video &amp; world foundation models</b>.</li>
+            <li>Core contributor to <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/">Image Playground</a> and <a href="https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/">Genmoji</a> in <a href="https://developer.apple.com/apple-intelligence/">Apple Intelligence</a>.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; border-bottom:1px solid #ddd; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/tencent.svg" alt="Tencent" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">Senior Research Scientist &middot; <a href="https://www.tencent.com/">Tencent America</a> <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 08/2023 &ndash; 12/2023</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">Graphics &middot; Palo Alto, CA</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>Image-to-3D reconstruction for generic objects and characters.</li>
+            <li>Built reconstruction pipelines on 2D and 3D diffusion priors for 2D-lifting reconstruction models.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; border-bottom:1px solid #ddd; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/meta.svg" alt="Meta" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">Research Scientist &middot; <a href="https://ai.meta.com/research/">FAIR Labs, Meta AI</a> <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 06/2022 &ndash; 07/2023</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">Onevision &middot; Menlo Park, CA</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>Member of <b>Onevision</b> pushing the next generation of foundational models for visio-linguistic understanding across space/time and 2D/3D.</li>
+            <li>Contributed to model scaling of a 3D counterpart to Segment-Anything for category-agnostic 3D reconstruction prior &mdash; culminating in <a href="https://uco3d.github.io/">uCO3D</a> and <a href="https://github.com/facebookresearch/pytorch3d">PyTorch3D</a> (v0.7.1, v0.7.2).</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; border-bottom:1px solid #ddd; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/amazon.svg" alt="Amazon" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">Applied Scientist II &middot; <a href="https://www.amazon.science/">Amazon</a> <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 06/2021 &ndash; 06/2022</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">M5 Core Modeling, Search Science &amp; AI &middot; Palo Alto, CA</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>Built <b>M5's LLM pretraining stack</b> for large-scale multi-modal pretraining, powering Amazon Business in Search.</li>
+            <li>Published original research to conferences, see <a href="https://www.amazon.science/author/jiali-duan">Amazon Science</a> for more details.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; border-bottom:1px solid #ddd; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/usc.svg" alt="USC" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">Research Assistant (PhD) &middot; <a href="https://viterbischool.usc.edu/">University of Southern California</a> <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 09/2017 &ndash; 06/2021</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">Advisors: <a href="https://viterbi.usc.edu/directory/faculty/Kuo/Chung-Chieh">C.-C. Jay Kuo</a>, <a href="https://stefanosnikolaidis.net/">Stefanos Nikolaidis</a> &middot; Los Angeles, CA</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>PhD research at the intersection of computer vision and robotics.</li>
+            <li><a href="https://arxiv.org/pdf/1810.02786.pdf">Interpretable CNNs via Feedforward Design</a> (<b>JVCI 2021 Best Paper Award</b>).</li>
+            <li><a href="https://arxiv.org/abs/1903.00636">Robot Learning via Human Adversarial Games</a> (<b>IROS 2019 Best Paper Finalist</b>; <a href="https://viterbischool.usc.edu/news/2019/11/showing-robots-tough-love-helps-them-succeed-finds-new-usc-study/">USC headline</a>).</li>
+            <li><a href="https://arxiv.org/pdf/2208.02932">Curriculum RL</a> with human-in-the-loop difficulty adjustment.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="exp-item" style="display:flex; gap:2rem; padding:1.5rem 0; align-items:flex-start;">
+        <div class="exp-logo" style="flex:0 0 110px;"><img src="images/logos/logo_ywgb2025.png" alt="CASIA" style="width:110px; height:110px; object-fit:contain; background:#fff; border-radius:12px; padding:8px;"></div>
+        <div class="exp-body" style="flex:1;">
+          <div style="font-weight:700; font-size:1.15em;">MSc Researcher &middot; Chinese Academy of Sciences (NLPR/CASIA) <span style="color:#888; font-weight:500; font-size:0.9em;">&nbsp;&middot;&nbsp; 2014 &ndash; 2017</span></div>
+          <div style="color:#555; font-style:italic; margin-bottom:0.5em;">Advisors: <a href="https://scholar.google.com/citations?user=Y-nyLGIAAAAJ">Stan Z. Li</a>, <a href="https://shengcailiao.github.io/">Shengcai Liao</a> &middot; Beijing, China</div>
+          <ul class="exp-bullets" style="margin:0; padding-left:1.25em; list-style:disc;">
+            <li>Research on Computer Vision including Object Detection, Multi-modal Representation learning.</li>
+            <li>Awarded the <a href="https://foreign.ucas.ac.cn/tzgg/06a894958f8e44c684b3a7f81ac2d53a.htm">Presidential Scholarship</a> (Chinese Academy of Sciences, 2017).</li>
+            <li><a href="ccbr_2016.html">Face Classification: A Specialized Benchmark Study</a> (<b>CCBR 2016 Best Student Paper</b>).</li>
+            <li><a href="accv_2016.html">Face Detection by Aggregating Visible Components</a> (ACCVW 2016 Oral).</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
 <section class="section-3" id="section-3">
   <div class="container">
-    <h2>Featured Writings</h2>
-    <ul class="kaiming-list">
-      <li><a href="https://jduan24-build_agent.curve.space/">Build a Simple LLM Agent from Scratch</a></li>
-      <li><a href="https://jduan24-diffusion.curve.space/">From DDPM to EDM: A Walkthrough of Diffusion Models</a></li>
-      <li><a href="projects/sites/robotic.html">Robotic Learning in Simulation</a></li>
-      <li><a href="projects/sites/vsp.html">Vision–Language Pretraining</a></li>
-      <li><a href="accv_2016.html">Face Detection by Aggregating Visible Components</a></li>
-      <li><a href="ccbr_2016.html">Face Classification: A Specialized Benchmark Study</a></li>
-    </ul>
   </div>
 </section>
 
@@ -1042,17 +1141,36 @@
 </section>
 
 
+<section class="section-3b" id="section-writings">
+  <div class="container">
+    <h2>Featured Writings</h2>
+    <ul class="kaiming-list">
+      <li><a href="https://jduan24-build_agent.curve.space/">Build a Simple LLM Agent from Scratch</a></li>
+      <li><a href="https://jduan24-diffusion.curve.space/">From DDPM to EDM: A Walkthrough of Diffusion Models</a></li>
+      <li><a href="projects/sites/robotic.html">Robotic Learning in Simulation</a></li>
+      <li><a href="projects/sites/vsp.html">Vision–Language Pretraining</a></li>
+      <li><a href="accv_2016.html">Face Detection by Aggregating Visible Components</a></li>
+      <li><a href="ccbr_2016.html">Face Classification: A Specialized Benchmark Study</a></li>
+    </ul>
+  </div>
+</section>
+
+
 <section class="section-7" id="section-7">
   <div class="container">
-    <h2>Professional Service / Talks</h2>
+    <h2>Talks</h2>
     <ul class="kaiming-list">
-      <li>Associate Journal Editor for APSIPA</li>
-      <li>Reviewer for CVPR, ECCV, ICCV, ICML, NeurIPS, ACL, EMNLP</li>
       <li><a href="cvpr2022/11488-Jiali-CVPRSlides.pdf">Multi-modal Alignment using Representation Codebook</a>, CVPR 2022</li>
       <li><a href="meeting-with-intel.pdf">Technical talk at Intel</a>, 2022</li>
       <li><a href="cvpr2021/3886-Jiali-CVPRSlides.pdf">SLADE: A Self-Training Metric Learning Framework</a>, CVPR 2021</li>
       <li><a href="https://davidsonic.github.io/summary/rl-guest-EE599#/">Guest Lecture for EE599-2020</a> (USC Deep Learning Course)</li>
       <li><a href="https://davidsonic.github.io/academic_blog/post/open-house/">Organizer / Presenter</a> for USC Robotics Open House, 2019</li>
+    </ul>
+
+    <h2>Professional Service</h2>
+    <ul class="kaiming-list">
+      <li>Associate Journal Editor for APSIPA</li>
+      <li>Reviewer for CVPR, ECCV, ICCV, ICML, NeurIPS, ACL, EMNLP</li>
     </ul>
   </div>
 </section>

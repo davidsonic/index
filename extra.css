@@ -475,3 +475,7 @@ hr.soft { border-color: #ddd !important; }
   .ttitle, .tdesc { display: block !important; margin-left: 0 !important; }
   .tdesc::before { content: ""; }
 }
+
+/* Experience section bullets */
+.exp-bullets { list-style: disc !important; padding-left: 1.5em !important; }
+.exp-bullets li { display: list-item !important; margin-bottom: 0.35em; }
